@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import {Link} from "react-router-dom";
 
 export class NavBarProfile extends Component {
     render() {
@@ -20,6 +21,12 @@ export class NavBarProfile extends Component {
                 <a href="#" className="dropdown-item"><i
                     className="ti-settings"></i> Account
                     Setting</a>
+                <div className="dropdown-divider"></div>
+                <Link to="/login" className="dropdown-item"><i
+                    className="fa fa-power-off"></i> Login</Link>
+                <div className="dropdown-divider"></div>
+                <Link to="/register" className="dropdown-item"><i
+                    className="fa fa-power-off"></i> Register</Link>
                 <div className="dropdown-divider"></div>
                 <a href="pages-login.html" className="dropdown-item"><i
                     className="fa fa-power-off"></i> Logout</a>

@@ -4,7 +4,7 @@
  */
 
 import React from "react";
-import {Route} from "react-router-dom";
+import {Route, Switch} from "react-router-dom";
 
 let renderRoutes = (routes) => {
     let routesRendered = null;
@@ -14,7 +14,9 @@ let renderRoutes = (routes) => {
                 <Route key={index} path={route.path} exact={route.exact} component={route.main}/>
             );
         });
-        return routesRendered;
+        return (
+            <Switch>{routesRendered}</Switch>
+        );
     }
 };
 export default renderRoutes;

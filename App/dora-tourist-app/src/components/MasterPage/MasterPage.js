@@ -9,20 +9,9 @@ import {LeftSideBar} from "../LeftSideBar/LeftSideBar";
 import {HomeSearchBar} from "../HomePage/HomeSearchBar";
 import homeContentRoutes from "../../routes/HomeContentRoutes";
 import {HomeRightSideBar} from "../HomePage/HomeRightSideBar";
-import {Route, Switch} from "react-router-dom";
+import renderRoutes from "../../utils/RouteUtil";
 
 class MasterPage extends Component {
-    renderRoutes = (routes) => {
-        let routesRendered = null;
-        if (routes.length > 0) {
-            routesRendered = routes.map((route, index) => {
-                return (
-                    <Route key={index} path={route.path} exact={route.exact} component={route.main}/>
-                );
-            });
-            return routesRendered;
-        }
-    };
     render() {
         return (
             <div>
@@ -35,11 +24,7 @@ class MasterPage extends Component {
                             <HomeSearchBar/>
 
                             {/*body content here!*/}
-
-                            <Switch>
-                                {this.renderRoutes(homeContentRoutes)}
-                            </Switch>
-
+                            {renderRoutes(homeContentRoutes)}
 
                             <HomeRightSideBar/>
                         </div>

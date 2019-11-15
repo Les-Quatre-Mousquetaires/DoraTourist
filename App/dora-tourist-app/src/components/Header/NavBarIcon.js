@@ -1,9 +1,10 @@
 import React, {Component} from "react";
+import {Link} from "react-router-dom";
 
 export class NavBarIcon extends Component {
     render() {
         return <div className="navbar-header">
-            <a className="navbar-brand" href="index.html">
+            <Link className="navbar-brand" to="/">
                 <b>
                     <img src="../assets/images/logo-icon.png" alt="homepage" className="dark-logo"/>
                     <img src="../assets/images/logo-light-icon.png" alt="homepage"
@@ -11,7 +12,7 @@ export class NavBarIcon extends Component {
                 </b>
                 <span className="hidden-xs"><span
                     className="font-bold">elite</span>realestate</span>
-            </a>
+            </Link>
         </div>;
     }
 }

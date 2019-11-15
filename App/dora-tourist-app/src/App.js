@@ -5,27 +5,46 @@ import {LeftSideBar} from "./components/LeftSideBar/LeftSideBar";
 import {HomeSearchBar} from "./components/HomePage/HomeSearchBar";
 import {HomeContent} from "./components/HomePage/HomeContent";
 import {HomeRightSideBar} from "./components/HomePage/HomeRightSideBar";
+import {BrowserRouter, Route, Switch} from "react-router-dom";
+import routes from "./routes";
 
 class App extends Component {
+    renderRoutes = (routes) => {
+        let routesRendered = null;
+        if (routes.length > 0) {
+            routesRendered = routes.map((route, index) => {
+                return (
+                    <Route key={index} path={route.path} exact={route.exact} component={route.main}/>
+                );
+            });
+            return routesRendered;
+        }
+    };
+
     render() {
         return (
-            <div>
-                <Preloader/>
-                <div id="main-wrapper">
-                    <Header/>
-                    <LeftSideBar/>
-                    <div className="page-wrapper">
-                        <div className="container-fluid">
-                            <HomeSearchBar/>
+            <BrowserRouter>
+                <div>
+                    <Preloader/>
+                    <div id="main-wrapper">
+                        <Header/>
+                        <LeftSideBar/>
+                        <div className="page-wrapper">
+                            <div className="container-fluid">
+                                <HomeSearchBar/>
 
-                            <HomeContent/>
+                                {/*body content here!*/}
+                                <Switch>
+                                    {this.renderRoutes(routes)}
+                                </Switch>
 
-                            <HomeRightSideBar/>
+                                <HomeRightSideBar/>
+                            </div>
                         </div>
-                    </div>
 
+                    </div>
                 </div>
-            </div>
+            </BrowserRouter>
         );
     }
 }

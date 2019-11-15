@@ -3,9 +3,9 @@
  * Email: tranphuquy19@gmail.com
  */
 import React from 'react';
-import {HomeContent} from "./components/HomePage/HomeContent";
+import {HomeContent} from "../components/HomePage/HomeContent";
 
-const routes = [
+const homeContentRoutes = [
     {
         path: '/',
         exact: true,
@@ -13,4 +13,4 @@ const routes = [
     },
 ];
 
-export default routes;
+export default homeContentRoutes;

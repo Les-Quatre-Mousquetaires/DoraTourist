@@ -23,10 +23,10 @@ export class NavBarProfile extends Component {
                     Setting</a>
                 <div className="dropdown-divider"></div>
                 <Link to="/login" className="dropdown-item"><i
-                    className="fa fa-power-off"></i> Login</Link>
+                    className="fas fa-sign-in-alt"></i> Login</Link>
                 <div className="dropdown-divider"></div>
                 <Link to="/register" className="dropdown-item"><i
-                    className="fa fa-power-off"></i> Register</Link>
+                    className="fa fas fa-user-plus"></i> Register</Link>
                 <div className="dropdown-divider"></div>
                 <a href="pages-login.html" className="dropdown-item"><i
                     className="fa fa-power-off"></i> Logout</a>

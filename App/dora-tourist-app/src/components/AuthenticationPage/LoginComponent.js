@@ -43,7 +43,7 @@ class LoginComponent extends Component {
                                         <div className="form-group text-center p-b-20">
                                             <div className="col-xs-12">
                                                 <button
-                                                    className="btn btn-info btn-lg btn-block btn-rounded text-uppercase waves-effect waves-light"
+                                                    className="btn btn-info btn btn-block btn-rounded text-uppercase waves-effect waves-light"
                                                     type="submit">Sign In
                                                 </button>
                                             </div>

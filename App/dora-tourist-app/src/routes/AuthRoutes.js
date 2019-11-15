@@ -6,6 +6,7 @@ import React from 'react';
 import LoginComponent from "../components/AuthenticationPage/LoginComponent";
 import RegisterComponent from "../components/AuthenticationPage/RegisterComponent";
 import MasterPage from "../components/MasterPage/MasterPage";
+import PageError404 from "../components/Meta/PageError404";
 
 const authRoutes = [
     {
@@ -20,6 +21,10 @@ const authRoutes = [
         path: '/',
         exact: true,
         main: () => <MasterPage/>
+    },{
+        path: '*',
+        exact: true,
+        main: () => <PageError404/>
     },
 
 ]

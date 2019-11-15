@@ -1,10 +1,4 @@
 import React, {Component} from 'react';
-import {Preloader} from "../Meta/Preloader";
-import {Header} from "../Header/Header";
-import {LeftSideBar} from "../LeftSideBar/LeftSideBar";
-import {HomeSearchBar} from "../HomePage/HomeSearchBar";
-import {HomeContent} from "../HomePage/HomeContent";
-import {HomeRightSideBar} from "../HomePage/HomeRightSideBar";
 import {BrowserRouter, Route, Switch} from "react-router-dom";
 import authRoutes from "../../routes/AuthRoutes";
 
@@ -24,7 +18,9 @@ class App extends Component {
     render() {
         return (
             <BrowserRouter>
-                {this.renderRoutes(authRoutes)}
+                <Switch>
+                    {this.renderRoutes(authRoutes)}
+                </Switch>
             </BrowserRouter>
         );
     }

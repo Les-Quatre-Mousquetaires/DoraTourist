@@ -6,6 +6,7 @@ import React from 'react';
 import {HomeContent} from "../components/HomePage/HomeContent";
 import TestRoute from "../components/UtilElementComponents/TestRoute";
 import TestRoute2 from "../components/UtilElementComponents/TestRoute2";
+import PageError404 from "../components/Meta/PageError404";
 
 const homeContentRoutes = [
     {
@@ -14,12 +15,16 @@ const homeContentRoutes = [
         main: () => <HomeContent/>
     },{
         path: '/test',
-        exact: false,
+        exact: true,
         main: () => <TestRoute/>
     },{
         path: '/test2',
-        exact: false,
+        exact: true,
         main: () => <TestRoute2/>
+    },{
+        path: '*',
+        exact: true,
+        main: () => <PageError404/>
     },
 ];
 

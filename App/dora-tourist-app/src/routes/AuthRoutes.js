@@ -7,25 +7,22 @@ import LoginComponent from "../components/AuthenticationPage/LoginComponent";
 import RegisterComponent from "../components/AuthenticationPage/RegisterComponent";
 import MasterPage from "../components/MasterPage/MasterPage";
 import PageError404 from "../components/Meta/PageError404";
+import LoginContainer from "../components/AuthenticationPage/LoginContainer";
 
 const authRoutes = [
     {
         path: '/login',
-        exact: false,
-        main: () => <LoginComponent/>
-    },{
+        exact: true,
+        main: () => <LoginContainer/>
+    }, {
         path: '/register',
-        exact: false,
+        exact: true,
         main: () => <RegisterComponent/>
-    },{
+    }, {
         path: '/',
         exact: false,
         main: () => <MasterPage/>
-    },{
-        path: '*',
-        exact: true,
-        main: () => <PageError404/>
-    },
+    }
 
 ]
 export default authRoutes;

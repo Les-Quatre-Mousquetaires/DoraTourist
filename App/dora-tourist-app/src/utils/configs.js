@@ -3,6 +3,6 @@
  * Email: tranphuquy19@gmail.com
  */
 let config = {
-    API_URL: 'http://localhost:3000/api',
+    API_URL: 'https://doraneko.tk',
 }
 export default config;

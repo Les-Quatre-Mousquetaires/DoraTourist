@@ -4,9 +4,9 @@
  */
 
 import axios from "axios";
-import config from "./config";
+import config from "./configs";
 
-let callApi = (endpoint, method = 'GET', body) => {
+let APICaller = (endpoint, method = 'GET', body) => {
     return axios({
         method: method,
         url: `${config.API_URL}/${endpoint}`,
@@ -14,4 +14,4 @@ let callApi = (endpoint, method = 'GET', body) => {
     });
 };
 
-export default callApi;
+export default APICaller;

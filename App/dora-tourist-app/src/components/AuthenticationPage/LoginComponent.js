@@ -3,9 +3,37 @@
  * Email: tranphuquy19@gmail.com
  */
 import React, {Component} from 'react';
+import APICaller from "../../utils/APICaller";
 
 class LoginComponent extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            email: '',
+            password: ''
+        }
+    }
+
+    onChange = (event) => {
+        let {name, value} = event.target;
+        this.setState({
+            [name]: value
+        });
+    }
+
+    onSubmit = async (event) => {
+        event.preventDefault();
+        let {email, password} = this.state;
+        let user = {
+            email, password
+        }
+        let {loginUser} = this.props.dispatch;
+        loginUser(user);
+    }
+
     render() {
+        let {role, token, name} = this.props.user;
+        localStorage.setItem('user', JSON.stringify({role, token, name}));
         return (
             <div className="row mt-5">
                 <div className="col-4">
@@ -13,20 +41,25 @@ class LoginComponent extends Component {
                 <div className="col-4 ">
                     <section id="wrapper">
                         <div className="login-register"
-                             style={{backgroundImage:`url(${"../assets/images/background/login-register.jpg"})`}}>
+                             style={{backgroundImage: `url(${"../assets/images/background/login-register.jpg"})`}}>
                             <div className="login-box card">
                                 <div className="card-body">
-                                    <form className="form-horizontal form-material" id="loginform">
+                                    <form onSubmit={this.onSubmit} className="form-horizontal form-material"
+                                          id="loginform">
                                         <h3 className="text-center m-b-20">Sign In</h3>
                                         <div className="form-group">
                                             <div className="col-xs-12">
-                                                <input className="form-control" type="text" required="" placeholder="Username"/>
+                                                <input className="form-control" name="email" type="text" required=""
+                                                       onChange={this.onChange}
+                                                       placeholder="Email"/>
                                             </div>
                                         </div>
 
                                         <div className="form-group ">
                                             <div className="col-xs-12">
-                                                <input className="form-control" type="password" required=""
+                                                <input className="form-control" name="password" type="password"
+                                                       required=""
+                                                       onChange={this.onChange}
                                                        placeholder="Password"/>
                                             </div>
                                         </div>
@@ -35,8 +68,9 @@ class LoginComponent extends Component {
                                                 <div className="custom-control custom-checkbox">
                                                     <input type="checkbox" className="custom-control-input"
                                                            id="customCheck1"/>
-                                                    <label className="custom-control-label" htmlFor="customCheck1">Remember me
-                                                        </label>
+                                                    <label className="custom-control-label" htmlFor="customCheck1">Remember
+                                                        me
+                                                    </label>
                                                 </div>
                                             </div>
                                         </div>
@@ -51,7 +85,7 @@ class LoginComponent extends Component {
                                         <div className="form-group m-b-0">
                                             <div className="col-sm-12 text-center">
                                                 Don't have an account? <a href="#"
-                                                                            className="text-info m-l-5"><b>Sign Up</b></a>
+                                                                          className="text-info m-l-5"><b>Sign Up</b></a>
                                             </div>
                                         </div>
                                     </form>

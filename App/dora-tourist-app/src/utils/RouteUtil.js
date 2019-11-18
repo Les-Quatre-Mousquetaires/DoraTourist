@@ -6,7 +6,7 @@
 import React from "react";
 import {Route, Switch} from "react-router-dom";
 
-let renderRoutes = (routes) => {
+let renderRoutes = (routes, isSwitch = true) => {
     let routesRendered = null;
     if (routes.length > 0) {
         routesRendered = routes.map((route, index) => {
@@ -15,7 +15,7 @@ let renderRoutes = (routes) => {
             );
         });
         return (
-            <Switch>{routesRendered}</Switch>
+            isSwitch ? <Switch>{routesRendered}</Switch> : routesRendered
         );
     }
 };

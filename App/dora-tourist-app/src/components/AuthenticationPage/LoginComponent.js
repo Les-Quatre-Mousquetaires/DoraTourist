@@ -16,7 +16,7 @@ class LoginComponent extends Component {
                              style={{backgroundImage:`url(${"../assets/images/background/login-register.jpg"})`}}>
                             <div className="login-box card">
                                 <div className="card-body">
-                                    <form className="form-horizontal form-material" id="loginform" action="index.html">
+                                    <form className="form-horizontal form-material" id="loginform">
                                         <h3 className="text-center m-b-20">Sign In</h3>
                                         <div className="form-group">
                                             <div className="col-xs-12">

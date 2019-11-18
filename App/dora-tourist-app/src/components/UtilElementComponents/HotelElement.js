@@ -2,7 +2,7 @@ import React, {Component} from "react";
 
 export class HotelElement extends Component {
     render() {
-        return <div className="col-lg-3 col-md-6">
+        return (<div className="col-lg-3 col-md-6">
             <div className="card">
                 <img className="card-img-top" src="../assets/images/property/prop1.jpeg"
                      alt="Card image cap"/>
@@ -34,6 +34,6 @@ export class HotelElement extends Component {
                     </div>
                 </div>
             </div>
-        </div>;
+        </div>);
     }
 }

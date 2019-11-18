@@ -19,7 +19,7 @@ const authRoutes = [
         main: () => <RegisterComponent/>
     },{
         path: '/',
-        exact: true,
+        exact: false,
         main: () => <MasterPage/>
     }
 

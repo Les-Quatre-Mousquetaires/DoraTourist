@@ -4,30 +4,42 @@
  */
 import React from 'react';
 import {HomeContent} from "../components/HomePage/HomeContent";
-<<<<<<< Updated upstream
-import DetailPage from "../components/DetailPage/DetailPage";
-=======
 import TestRoute from "../components/UtilElementComponents/TestRoute";
 import TestRoute2 from "../components/UtilElementComponents/TestRoute2";
-import {HotelElement} from "../components/UtilElementComponents/HotelElement";
->>>>>>> Stashed changes
+import TourDetailElement from "../components/UtilElementComponents/TourDetailElement";
+import DashBoard from "../components/UtilElementComponents/DashBoard";
+import Profile from "../components/UtilElementComponents/Profile";
 
 const homeContentRoutes = [
     {
         path: '/',
-        exact: false,
+        exact: true,
         main: () => <HomeContent/>
-    },
-    {
-        path: '/tours',
+    },{
+        path: '/test',
         exact: false,
-        main: () => <DetailPage/>
-    },
-    {
-        path: '/tours',
+        main: () => <TestRoute/>
+    },{
+        path: '/test2',
         exact: false,
         main: () => <TestRoute2/>
     },
+    {
+        path: '/tour',
+        exact: false,
+        main: () => <TourDetailElement/>
+    },
+    {
+        path: '/dashboard',
+        exact: false,
+        main: () => <DashBoard/>
+    },
+    {
+        path: '/profile',
+        exact: false,
+        main: () => <Profile/>
+    },
+
 ];
 
 export default homeContentRoutes;

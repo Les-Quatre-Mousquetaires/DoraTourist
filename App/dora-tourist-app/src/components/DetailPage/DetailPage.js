@@ -4,7 +4,7 @@ class DetailPage extends Component {
     render() {
         return (
             <div>
-                vgyvgfv
+                wtf
             </div>
         );
     }

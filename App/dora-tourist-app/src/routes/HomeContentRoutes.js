@@ -12,6 +12,11 @@ const homeContentRoutes = [
         exact: false,
         main: () => <HomeContent/>
     },
+    {
+        path: '/tours',
+        exact: false,
+        main: () => <DetailPage/>
+    },
 ];
 
 export default homeContentRoutes;

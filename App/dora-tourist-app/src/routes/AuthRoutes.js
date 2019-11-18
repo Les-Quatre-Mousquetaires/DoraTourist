@@ -21,11 +21,7 @@ const authRoutes = [
         path: '/',
         exact: true,
         main: () => <MasterPage/>
-    },{
-        path: '*',
-        exact: true,
-        main: () => <PageError404/>
-    },
+    }
 
 ]
 export default authRoutes;

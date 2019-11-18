@@ -10,12 +10,14 @@ let renderRoutes = (routes) => {
     let routesRendered = null;
     if (routes.length > 0) {
         routesRendered = routes.map((route, index) => {
+            console.log(route.main);
+
             return (
                 <Route key={index} path={route.path} exact={route.exact} component={route.main}/>
             );
         });
         return (
-            <Switch>{routesRendered}</Switch>
+            routesRendered
         );
     }
 };

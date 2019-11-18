@@ -25,7 +25,6 @@ class MasterPage extends Component {
 
                             {/*body content here!*/}
                             {renderRoutes(homeContentRoutes)}
-
                             <HomeRightSideBar/>
                         </div>
                     </div>

@@ -4,11 +4,12 @@
  */
 import React from 'react';
 import {HomeContent} from "../components/HomePage/HomeContent";
+import DetailPage from "../components/DetailPage/DetailPage";
 
 const homeContentRoutes = [
     {
         path: '/',
-        exact: true,
+        exact: false,
         main: () => <HomeContent/>
     },
 ];

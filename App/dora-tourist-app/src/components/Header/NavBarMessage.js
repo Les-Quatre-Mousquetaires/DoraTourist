@@ -19,7 +19,7 @@ export class NavBarMessage extends Component {
                         <div className="message-center">
                             <a href="#">
                                 <div className="user-img"><img
-                                    src="../assets/images/users/1.jpg" alt="user"
+                                    src="/assets/images/users/1.jpg" alt="user"
                                     className="img-circle"/> <span
                                     className="profile-status online pull-right"/>
                                 </div>
@@ -32,7 +32,7 @@ export class NavBarMessage extends Component {
                             <a href="#">
                                 <div className="user-img">
                                     <img
-                                        src="../assets/images/users/2.jpg" alt="user"
+                                        src="/assets/images/users/2.jpg" alt="user"
                                         className="img-circle"/> <span
                                     className="profile-status busy pull-right"/></div>
                                 <div className="mail-contnet">
@@ -43,7 +43,7 @@ export class NavBarMessage extends Component {
                             </a>
                             <a href="#">
                                 <div className="user-img"><img
-                                    src="../assets/images/users/3.jpg" alt="user"
+                                    src="/assets/images/users/3.jpg" alt="user"
                                     className="img-circle"/> <span
                                     className="profile-status away pull-right"/></div>
                                 <div className="mail-contnet">
@@ -54,7 +54,7 @@ export class NavBarMessage extends Component {
                             </a>
                             <a href="#">
                                 <div className="user-img"><img
-                                    src="../assets/images/users/4.jpg" alt="user"
+                                    src="/assets/images/users/4.jpg" alt="user"
                                     className="img-circle"/> <span
                                     className="profile-status offline pull-right"></span>
                                 </div>

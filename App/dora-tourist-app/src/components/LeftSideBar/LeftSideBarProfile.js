@@ -5,7 +5,7 @@ export class LeftSideBarProfile extends Component {
         return <li className="user-pro"><a className="has-arrow waves-effect waves-dark"
                                            href="#"
                                            aria-expanded="false"><img
-            src="../assets/images/users/1.jpg" alt="user-img"
+            src="/assets/images/users/1.jpg" alt="user-img"
             className="img-circle"/><span className="hide-menu">Mark Jeckson</span></a>
             <ul aria-expanded="false" className="collapse">
                 <li><a href="#"><i className="ti-user"></i> My Profile</a>

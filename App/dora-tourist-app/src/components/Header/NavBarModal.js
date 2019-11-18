@@ -17,19 +17,19 @@ export class NavBarModal extends Component {
                                 <div className="carousel-item active">
                                     <div className="container"><img
                                         className="d-block img-fluid"
-                                        src="../assets/images/big/img1.jpg"
+                                        src="/assets/images/big/img1.jpg"
                                         alt="First slide"/></div>
                                 </div>
                                 <div className="carousel-item">
                                     <div className="container"><img
                                         className="d-block img-fluid"
-                                        src="../assets/images/big/img2.jpg"
+                                        src="/assets/images/big/img2.jpg"
                                         alt="Second slide"/></div>
                                 </div>
                                 <div className="carousel-item">
                                     <div className="container"><img
                                         className="d-block img-fluid"
-                                        src="../assets/images/big/img3.jpg"
+                                        src="/assets/images/big/img3.jpg"
                                         alt="Third slide"/></div>
                                 </div>
                             </div>

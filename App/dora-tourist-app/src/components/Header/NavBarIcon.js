@@ -6,8 +6,8 @@ export class NavBarIcon extends Component {
         return <div className="navbar-header">
             <Link className="navbar-brand" to="/">
                 <b>
-                    <img src="../assets/images/logo-icon.png" alt="homepage" className="dark-logo"/>
-                    <img src="../assets/images/logo-light-icon.png" alt="homepage"
+                    <img src="/assets/images/logo-icon.png" alt="homepage" className="dark-logo"/>
+                    <img src="/assets/images/logo-light-icon.png" alt="homepage"
                          className="light-logo"/>
                 </b>
                 <span className="hidden-xs"><span

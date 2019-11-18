@@ -13,7 +13,7 @@ class RegisterComponent extends Component {
                 <div className="col-4 ">
                     <section id="wrapper">
                         <div className="login-register"
-                             style={{backgroundImage:`url(${"../assets/images/background/login-register.jpg"})`}}>
+                             style={{backgroundImage:`url(${"/assets/images/background/login-register.jpg"})`}}>
                             <div className="login-box card">
                                 <div className="card-body">
                                     <form className="form-horizontal form-material" id="loginform" action="index.html">

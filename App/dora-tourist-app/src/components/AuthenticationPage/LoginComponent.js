@@ -41,7 +41,7 @@ class LoginComponent extends Component {
                 <div className="col-4 ">
                     <section id="wrapper">
                         <div className="login-register"
-                             style={{backgroundImage: `url(${"../assets/images/background/login-register.jpg"})`}}>
+                             style={{backgroundImage: `url(${"/assets/images/background/login-register.jpg"})`}}>
                             <div className="login-box card">
                                 <div className="card-body">
                                     <form onSubmit={this.onSubmit} className="form-horizontal form-material"

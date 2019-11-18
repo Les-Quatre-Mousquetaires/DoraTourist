@@ -4,7 +4,13 @@
  */
 import React from 'react';
 import {HomeContent} from "../components/HomePage/HomeContent";
+<<<<<<< Updated upstream
 import DetailPage from "../components/DetailPage/DetailPage";
+=======
+import TestRoute from "../components/UtilElementComponents/TestRoute";
+import TestRoute2 from "../components/UtilElementComponents/TestRoute2";
+import {HotelElement} from "../components/UtilElementComponents/HotelElement";
+>>>>>>> Stashed changes
 
 const homeContentRoutes = [
     {
@@ -16,6 +22,11 @@ const homeContentRoutes = [
         path: '/tours',
         exact: false,
         main: () => <DetailPage/>
+    },
+    {
+        path: '/tours',
+        exact: false,
+        main: () => <TestRoute2/>
     },
 ];
 

@@ -5,6 +5,7 @@
 import React from 'react';
 import {HomeContent} from "../components/HomePage/HomeContent";
 import TestRoute from "../components/UtilElementComponents/TestRoute";
+import TestRoute2 from "../components/UtilElementComponents/TestRoute2";
 
 const homeContentRoutes = [
     {
@@ -15,6 +16,10 @@ const homeContentRoutes = [
         path: '/test',
         exact: false,
         main: () => <TestRoute/>
+    },{
+        path: '/test2',
+        exact: false,
+        main: () => <TestRoute2/>
     },
 ];
 

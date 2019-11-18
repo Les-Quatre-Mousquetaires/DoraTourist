@@ -12,6 +12,7 @@ import {HomeRightSideBar} from "../HomePage/HomeRightSideBar";
 import renderRoutes from "../../utils/RouteUtil";
 
 class MasterPage extends Component {
+
     render() {
         return (
             <div>
@@ -24,7 +25,8 @@ class MasterPage extends Component {
                             <HomeSearchBar/>
 
                             {/*body content here!*/}
-                            {renderRoutes(homeContentRoutes)}
+                            {renderRoutes(homeContentRoutes, true)}
+
                             <HomeRightSideBar/>
                         </div>
                     </div>

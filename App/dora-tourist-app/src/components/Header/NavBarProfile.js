@@ -1,7 +1,15 @@
 import React, {Component} from "react";
 import {Link} from "react-router-dom";
+import {logout} from "../../actions/UserAction";
+import {connect} from "react-redux";
+ class NavBarProfile extends Component {
 
-export class NavBarProfile extends Component {
+     onClick = () => {
+         console.log(123);
+         let {logoutUser} = this.props;
+         logoutUser();
+     }
+
     render() {
         return <li className="nav-item dropdown u-pro">
             <a className="nav-link dropdown-toggle waves-effect waves-dark profile-pic"
@@ -28,9 +36,17 @@ export class NavBarProfile extends Component {
                 <Link to="/register" className="dropdown-item"><i
                     className="fa fas fa-user-plus"></i> Register</Link>
                 <div className="dropdown-divider"></div>
-                <a href="pages-login.html" className="dropdown-item"><i
+                <a className="dropdown-item" onClick={this.onClick}><i
                     className="fa fa-power-off"></i> Logout</a>
             </div>
         </li>;
     }
 }
+const mapDispatchToProps = (dispatch, props) => {
+    return {
+        logoutUser: () => {
+            dispatch(logout());
+        }
+    }
+}
+export default connect(null, mapDispatchToProps)(NavBarProfile);

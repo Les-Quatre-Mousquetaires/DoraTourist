@@ -1,6 +1,14 @@
 import React, {Component} from "react";
+import {logout} from "../../actions/UserAction";
+import {connect} from "react-redux";
 
-export class LeftSideBarProfile extends Component {
+class LeftSideBarProfile extends Component {
+
+    onClick = () => {
+        let {logoutUser} = this.props;
+        logoutUser();
+    }
+
     render() {
         return <li className="user-pro"><a className="has-arrow waves-effect waves-dark"
                                            href="#"
@@ -15,9 +23,21 @@ export class LeftSideBarProfile extends Component {
                 <li><a href="#"><i className="ti-email"></i> Inbox</a></li>
                 <li><a href="#"><i className="ti-settings"></i> Account
                     Setting</a></li>
-                <li><a href="#"><i className="fa fa-power-off"></i> Logout</a>
+                <li><a onClick={this.onClick}><i className="fa fa-power-off"></i> Logout</a>
                 </li>
             </ul>
         </li>;
     }
+
 }
+
+
+const mapDispatchToProps = (dispatch, props) => {
+    return {
+        logoutUser: () => {
+            dispatch(logout());
+        }
+    }
+}
+
+export default connect(null, mapDispatchToProps)(LeftSideBarProfile);

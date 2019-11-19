@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import {LeftSideBarProfile} from "./LeftSideBarProfile";
+import LeftSideBarProfile from "./LeftSideBarProfile";
 
 export class LeftSideBar extends Component {
     render() {

@@ -3,7 +3,7 @@ import {NavBarIcon} from "./NavBarIcon";
 import {NavBarFromSearch} from "./NavBarFormSearch";
 import {NavBarNotification} from "./NavBarNotification";
 import {NavBarModal} from "./NavBarModal";
-import {NavBarProfile} from "./NavBarProfile";
+import NavBarProfile from "./NavBarProfile";
 import {NavBarSettings} from "./NavBarSettings";
 import {NavBarMessage} from "./NavBarMessage";
 
@@ -36,5 +36,9 @@ export class Header extends Component {
                 </nav>
             </header>
         );
+    }onClick = () => {
+        console.log(123);
+        let {logoutUser} = this.props;
+        logoutUser();
     }
 }

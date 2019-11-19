@@ -3,7 +3,7 @@
  * Email: tranphuquy19@gmail.com
  */
 
-import {LOGIN_USER} from "../utils/Types";
+import {LOGIN_USER, LOGOUT_USER} from "../utils/Types";
 
 let userLogged = JSON.parse(localStorage.getItem('user'));
 let userInitState = userLogged ? {isLogged: true, user: userLogged} : {
@@ -24,6 +24,8 @@ let userReducer = (state = userInitState, action) => {
         case LOGIN_USER:
             let user = action.payload.data;
             return user;
+        case LOGOUT_USER:
+            return state;
         default:
             return state;
     }

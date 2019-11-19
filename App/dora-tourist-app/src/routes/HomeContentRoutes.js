@@ -7,7 +7,7 @@ import {HomeContent} from "../components/HomePage/HomeContent";
 import TestRoute from "../components/UtilElementComponents/TestRoute";
 import TestRoute2 from "../components/UtilElementComponents/TestRoute2";
 import TourDetailElement from "../components/UtilElementComponents/TourDetailElement";
-import DashBoard from "../components/UtilElementComponents/DashBoard";
+import DashBoard from "../components/UtilElementComponents/Dashboard";
 import Profile from "../components/UtilElementComponents/Profile";
 
 const homeContentRoutes = [

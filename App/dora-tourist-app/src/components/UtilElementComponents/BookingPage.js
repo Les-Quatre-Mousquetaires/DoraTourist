@@ -1,20 +1,6 @@
 import React, {Component} from 'react';
-import $ from 'jquery';
 
 class BookingPage extends Component {
-    componentDidMount() {
-        // $(function() {
-        //     $(".preloader").fadeOut();
-        // });
-        // $(function() {
-        //     $('[data-toggle="tooltip"]').tooltip()
-        // });
-        // $('#to-recover').on("click", function() {
-        //     $("#loginform").slideUp();
-        //     $("#recoverform").fadeIn();
-        // });
-    }
-
     render() {
         return (
             <div>

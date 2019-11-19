@@ -6,12 +6,28 @@ import React, {Component} from 'react';
 import LoginComponent from "./LoginComponent";
 import {login} from "../../actions/UserAction";
 import {connect} from "react-redux";
+import {Redirect} from "react-router-dom";
+
+let redirect;
 
 class LoginContainer extends Component {
+    constructor(props) {
+        super(props);
+    }
+
+    shouldComponentUpdate(nextProps, nextState, nextContext) {
+        if(this.props.user.token !== ''){
+            redirect = <Redirect to="/"/>;
+            console.log(redirect)
+        }
+        return true;
+    }
+
     render() {
         return (
             <div>
                 <LoginComponent user={this.props.user} dispatch={this.props}/>
+                {redirect}
             </div>
         );
     }

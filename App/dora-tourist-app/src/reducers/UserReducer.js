@@ -5,15 +5,19 @@
 
 import {LOGIN_USER} from "../utils/Types";
 
-let userInitState = {
-    _id: '',
-    name: '',
-    token: '',
-    email: '',
-    role: '',
-    tours: [],
-    comments: []
-}
+let userLogged = JSON.parse(localStorage.getItem('user'));
+let userInitState = userLogged ? {isLogged: true, user: userLogged} : {
+    isLogged: false,
+    user: {
+        _id: '',
+        name: '',
+        token: '',
+        email: '',
+        role: '',
+        tours: [],
+        comments: []
+    }
+};
 
 let userReducer = (state = userInitState, action) => {
     switch (action.type) {

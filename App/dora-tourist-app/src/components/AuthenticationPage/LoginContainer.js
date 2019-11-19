@@ -13,10 +13,12 @@ let redirect;
 class LoginContainer extends Component {
     constructor(props) {
         super(props);
+        redirect = null
     }
 
     shouldComponentUpdate(nextProps, nextState, nextContext) {
-        if(this.props.user.token !== ''){
+        console.log('LOGIN', nextProps);
+        if(nextProps.user.token !== ''){
             redirect = <Redirect to="/"/>;
         }
         return true;

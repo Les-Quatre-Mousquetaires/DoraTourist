@@ -31,17 +31,9 @@ class LoginComponent extends Component {
         loginUser(user);
     }
 
-    // componentDidMount() {
-    //     console.log(123123);
-    //     if(this.props.user){
-    //         this.props.history.push('/');
-    //     }
-    // }
-
     render() {
         let {user} = this.props;
         localStorage.setItem('user', JSON.stringify(user));
-        // console.log(this.props);
         return (
             <div className="row mt-5">
                 <div className="col-4">

@@ -8,6 +8,7 @@ import RegisterComponent from "../components/AuthenticationPage/RegisterComponen
 import MasterPage from "../components/MasterPage/MasterPage";
 import PageError404 from "../components/Meta/PageError404";
 import LoginContainer from "../components/AuthenticationPage/LoginContainer";
+import BookingPage from "../components/UtilElementComponents/BookingPage";
 
 const authRoutes = [
     {
@@ -19,6 +20,10 @@ const authRoutes = [
         exact: true,
         main: () => <RegisterComponent/>
     }, {
+        path: '/booking',
+        exact: false,
+        main: () => <BookingPage/>
+    },{
         path: '/',
         exact: false,
         main: () => <MasterPage/>

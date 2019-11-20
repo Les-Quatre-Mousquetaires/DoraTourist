@@ -19,8 +19,8 @@ import {connect} from "react-redux";
                 className="hidden-md-down">Mark &nbsp;<i
                 className="fa fa-angle-down"></i></span> </a>
             <div className="dropdown-menu dropdown-menu-right animated flipInY">
-                <a href="#" className="dropdown-item"><i
-                    className="ti-user"></i> My Profile</a>
+                <Link to='/profile' href="#" className="dropdown-item"><i
+                    className="ti-user"></i> My Profile</Link>
                 <a href="#" className="dropdown-item"><i
                     className="ti-wallet"></i> My Balance</a>
                 <a href="#" className="dropdown-item"><i

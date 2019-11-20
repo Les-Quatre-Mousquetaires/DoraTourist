@@ -25,17 +25,17 @@ class RegisterComponent extends Component {
         this.setState({
             [name]: value
         });
-    }
+    };
 
     onSubmit = (event) => {
         event.preventDefault();
         let {name, email, password} = this.state;
         let user = {
             name, email, password
-        }
+        };
         let {registerUser} = this.props;
         registerUser(user);
-    }
+    };
 
     shouldComponentUpdate(nextProps, nextState, nextContext) {
         if(nextProps.user._id){
@@ -104,7 +104,7 @@ class RegisterComponent extends Component {
                                             </div>
                                             <div className="form-group m-b-0">
                                                 <div className="col-sm-12 text-center">
-                                                    Already have an account? <a href="pages-login.html"
+                                                    Already have an account? <a href="#"
                                                                                 className="text-info m-l-5"><b>Sign
                                                     In</b></a>
                                                 </div>
@@ -129,7 +129,7 @@ const mapStateToProps = (state) => {
     return {
         user: state.userReducer
     };
-}
+};
 
 const mapDispatchToProps = (dispatch, props) => {
     return {
@@ -137,6 +137,6 @@ const mapDispatchToProps = (dispatch, props) => {
             dispatch(register(user));
         }
     }
-}
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(RegisterComponent);

@@ -4,7 +4,7 @@
  */
 
 
-import {LOGIN_USER, LOGOUT_USER, REGISTER_USER} from "../utils/Types";
+import {LOGIN_USER, LOGOUT_USER, REGISTER_USER, VIEW_USER} from "../utils/Types";
 
 let userLogged = JSON.parse(localStorage.getItem('user'));
 let userNull = {
@@ -15,7 +15,7 @@ let userNull = {
     role: '',
     tours: [],
     comments: []
-}
+};
 
 let userInitState = userLogged ? userLogged : {
     user: userNull
@@ -32,9 +32,11 @@ let userReducer = (state = userInitState, action) => {
         case REGISTER_USER:
             let user3 = action.payload.data;
             return user3;
+        case VIEW_USER:
+            return action.payload.data;
         default:
             return state;
     }
-}
+};
 
 export default userReducer;

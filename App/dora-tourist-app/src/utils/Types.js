@@ -3,9 +3,10 @@
  * Email: tranphuquy19@gmail.com
  */
 const LOGIN_USER = 'login_user';
-const LOGOUT_USER = 'OGOUT_USER';
-const REGISTER_USER = 'REGISTER_USER';
+const LOGOUT_USER = 'logout_user';
+const REGISTER_USER = 'register_user';
+const VIEW_USER = 'view_user'
 
 export {
-    LOGIN_USER, LOGOUT_USER, REGISTER_USER
+    LOGIN_USER, LOGOUT_USER, REGISTER_USER, VIEW_USER
 }

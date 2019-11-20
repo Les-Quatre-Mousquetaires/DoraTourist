@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import {logout} from "../../actions/UserAction";
+import {logout} from "../../actions/AuthAction";
 import {connect} from "react-redux";
 
 class LeftSideBarProfile extends Component {

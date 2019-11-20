@@ -4,7 +4,7 @@
  */
 import React, {Component} from 'react';
 import LoginComponent from "./LoginComponent";
-import {login} from "../../actions/UserAction";
+import {login} from "../../actions/AuthAction";
 import {connect} from "react-redux";
 import {Redirect} from "react-router-dom";
 

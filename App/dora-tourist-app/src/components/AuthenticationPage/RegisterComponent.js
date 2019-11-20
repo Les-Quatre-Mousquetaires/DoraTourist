@@ -3,7 +3,7 @@
  * Email: tranphuquy19@gmail.com
  */
 import React, {Component} from 'react';
-import {register} from "../../actions/UserAction";
+import {register} from "../../actions/AuthAction";
 import {connect} from "react-redux";
 import {Redirect} from "react-router-dom";
 

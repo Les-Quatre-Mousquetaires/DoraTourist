@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {ProfileFormLeft} from "../Proflie/ProflieFormLeft";
 import {ProfileTagRight} from "../Proflie/ProflieTagRight";
 import {ServicePanel} from "./ServicePanel";
-import {register, view} from "../../actions/UserAction";
+import {register, view} from "../../actions/AuthAction";
 import {connect} from "react-redux";
 
 class Profile extends Component {

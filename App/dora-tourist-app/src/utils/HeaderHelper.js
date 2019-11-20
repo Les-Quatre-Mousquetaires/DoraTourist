@@ -6,6 +6,6 @@ let token = JSON.parse(localStorage.getItem('user')) ? 'Bearer '+ JSON.parse(loc
 const headerHeper = {
     'Authorization': token,
     'Content-Type': 'application/json'
-}
+};
 
 export default headerHeper;

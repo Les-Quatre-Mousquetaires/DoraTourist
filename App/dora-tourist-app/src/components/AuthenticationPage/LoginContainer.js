@@ -13,7 +13,8 @@ let redirect;
 class LoginContainer extends Component {
     constructor(props) {
         super(props);
-        redirect = null
+        redirect = null;
+
     }
 
     shouldComponentUpdate(nextProps, nextState, nextContext) {
@@ -37,7 +38,7 @@ const mapStateToProps = (state) => {
     return {
         user: state.userReducer
     };
-}
+};
 
 const mapDispatchToProps = (dispatch, props) => {
     return {
@@ -45,6 +46,6 @@ const mapDispatchToProps = (dispatch, props) => {
             dispatch(login(user));
         }
     }
-}
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(LoginContainer);

@@ -23,7 +23,7 @@ class LeftSideBarProfile extends Component {
                 <li><a href="#"><i className="ti-email"></i> Inbox</a></li>
                 <li><a href="#"><i className="ti-settings"></i> Account
                     Setting</a></li>
-                <li><a onClick={this.onClick}><i className="fa fa-power-off"></i> Logout</a>
+                <li><a style={{cursor:'pointer'}} onClick={this.onClick}><i className="fa fa-power-off"></i> Logout</a>
                 </li>
             </ul>
         </li>;

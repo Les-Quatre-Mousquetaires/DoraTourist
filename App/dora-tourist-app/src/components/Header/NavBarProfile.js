@@ -5,7 +5,6 @@ import {connect} from "react-redux";
  class NavBarProfile extends Component {
 
      onClick = () => {
-         console.log(123);
          let {logoutUser} = this.props;
          logoutUser();
      }
@@ -36,7 +35,7 @@ import {connect} from "react-redux";
                 <Link to="/register" className="dropdown-item"><i
                     className="fa fas fa-user-plus"></i> Register</Link>
                 <div className="dropdown-divider"></div>
-                <a className="dropdown-item" onClick={this.onClick}><i
+                <a style={{cursor:'pointer'}} className="dropdown-item" onClick={this.onClick}><i
                     className="fa fa-power-off"></i> Logout</a>
             </div>
         </li>;

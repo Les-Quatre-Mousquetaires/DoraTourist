@@ -22,7 +22,6 @@ const logout = () => {
 const register = (user) => {
     return async dispatch => {
         const response = await APICaller('api/users/', 'POST', user);
-        console.log(response);
         dispatch({type: REGISTER_USER, payload: response});
     }
 }

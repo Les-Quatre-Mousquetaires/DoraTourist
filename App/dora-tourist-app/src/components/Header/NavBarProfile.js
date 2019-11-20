@@ -36,7 +36,7 @@ import {connect} from "react-redux";
                 <Link to="/register" className="dropdown-item"><i
                     className="fa fas fa-user-plus"></i> Register</Link>
                 <div className="dropdown-divider"></div>
-                <a className="dropdown-item" onClick={this.onClick}><i
+                <a style={{cursor:'pointer'}} className="dropdown-item" onClick={this.onClick}><i
                     className="fa fa-power-off"></i> Logout</a>
             </div>
         </li>;

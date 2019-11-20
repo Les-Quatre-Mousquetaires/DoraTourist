@@ -5,7 +5,6 @@ import {connect} from "react-redux";
  class NavBarProfile extends Component {
 
      onClick = () => {
-         console.log(123);
          let {logoutUser} = this.props;
          logoutUser();
      }

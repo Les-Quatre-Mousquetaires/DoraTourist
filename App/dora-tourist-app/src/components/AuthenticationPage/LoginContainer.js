@@ -17,8 +17,7 @@ class LoginContainer extends Component {
     }
 
     shouldComponentUpdate(nextProps, nextState, nextContext) {
-        console.log('LOGIN', nextProps);
-        if(nextProps.user.token !== ''){
+        if (nextProps.user.token) {
             redirect = <Redirect to="/"/>;
         }
         return true;

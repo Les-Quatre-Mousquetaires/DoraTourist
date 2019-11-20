@@ -2,9 +2,9 @@
  * Created by @tranphuquy19 on 20/11/2019
  * Email: tranphuquy19@gmail.com
  */
-let token = JSON.parse(localStorage.getItem('user')).token;
+let token = JSON.parse(localStorage.getItem('user')) ? 'Bearer '+ JSON.parse(localStorage.getItem('user')).token : undefined;
 const headerHeper = {
-    'Authorization': 'Bearer ' + token,
+    'Authorization': token,
     'Content-Type': 'application/json'
 }
 

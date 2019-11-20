@@ -3,9 +3,9 @@
  * Email: tranphuquy19@gmail.com
  */
 let token = JSON.parse(localStorage.getItem('user')).token;
-const header = {
+const headerHeper = {
     'Authorization': 'Bearer ' + token,
     'Content-Type': 'application/json'
 }
 
-export default header;
+export default headerHeper;

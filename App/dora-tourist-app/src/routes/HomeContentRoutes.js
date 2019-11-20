@@ -35,7 +35,7 @@ const homeContentRoutes = [
         main: () => <DashBoard/>
     },
     {
-        path: '/profile',
+        path: '/profile/:id',
         exact: false,
         main: () => <Profile/>
     },

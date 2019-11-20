@@ -62,7 +62,7 @@ const mapDispatchToProps = (dispatch, props) => {
 
 const mapStateToProps = (state) => {
     return {
-        user: state.userReducer
+        user: state.authReducer
     };
 }
 

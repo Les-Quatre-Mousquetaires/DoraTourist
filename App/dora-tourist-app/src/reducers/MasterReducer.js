@@ -3,10 +3,10 @@
  * Email: tranphuquy19@gmail.com
  */
 import {combineReducers} from "redux";
-import userReducer from "./UserReducer";
+import authReducer from "./AuthReducer";
 
 const masterReducer = combineReducers({
-    userReducer
+    authReducer: authReducer
 });
 
 export default masterReducer;

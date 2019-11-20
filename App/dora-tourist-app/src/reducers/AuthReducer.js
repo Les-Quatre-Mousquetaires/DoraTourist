@@ -21,7 +21,7 @@ let userInitState = userLogged ? userLogged : {
     user: userNull
 };
 
-let userReducer = (state = userInitState, action) => {
+let authReducer = (state = userInitState, action) => {
     switch (action.type) {
         case LOGIN_USER:
             let user1 = action.payload.data;
@@ -39,4 +39,4 @@ let userReducer = (state = userInitState, action) => {
     }
 };
 
-export default userReducer;
+export default authReducer;

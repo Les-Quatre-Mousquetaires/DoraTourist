@@ -11,10 +11,11 @@ class NavBarProfile extends Component {
     }
 
     render() {
+        let link = 'profile/' + this.props.user._id;
         let onLogged = <div className="dropdown-menu dropdown-menu-right animated flipInY">
-            <a href="#" className="dropdown-item">
+            <Link to={link} className="dropdown-item">
                 <i className="ti-user"></i> My Profile
-            </a>
+            </Link>
             <a href="#" className="dropdown-item">
                 <i className="ti-wallet"></i> My Balance
             </a>
@@ -46,7 +47,7 @@ class NavBarProfile extends Component {
                 src="/assets/images/users/1.jpg" alt="user" className=""/> <span
                 className="hidden-md-down">Mark &nbsp;<i
                 className="fa fa-angle-down"></i></span> </a>
-            {this.props.user._id ? onLogged : normal};
+            {this.props.user._id ? onLogged : normal}
         </li>;
     }
 }

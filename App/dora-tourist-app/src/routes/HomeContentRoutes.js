@@ -7,6 +7,9 @@ import {HomeContent} from "../components/HomePage/HomeContent";
 import TestRoute from "../components/UtilElementComponents/TestRoute";
 import TestRoute2 from "../components/UtilElementComponents/TestRoute2";
 import PageError404 from "../components/Meta/PageError404";
+import TourDetailElement from "../components/UtilElementComponents/TourDetailElement";
+import DashBoard from "../components/UtilElementComponents/DashBoard";
+import Profile from "../components/UtilElementComponents/Profile";
 
 const homeContentRoutes = [
     {
@@ -22,6 +25,21 @@ const homeContentRoutes = [
         exact: true,
         main: () => <TestRoute2/>
     },{
+        path: '/tour',
+        exact: false,
+        main: () => <TourDetailElement/>
+    },
+    {
+        path: '/dashboard',
+        exact: false,
+        main: () => <DashBoard/>
+    },
+    {
+        path: '/profile/:id',
+        exact: false,
+        main: () => <Profile/>
+    },
+    {
         path: '*',
         exact: true,
         main: () => <PageError404/>

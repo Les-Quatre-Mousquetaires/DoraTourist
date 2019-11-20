@@ -16,7 +16,7 @@ class RegisterComponent extends Component {
             name: '',
             email: '',
             password: ''
-        }
+        };
         redirect = null;
     }
 

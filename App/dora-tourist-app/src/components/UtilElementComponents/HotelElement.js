@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import {Link} from "react-router-dom";
 
 export class HotelElement extends Component {
     render() {
@@ -32,8 +33,11 @@ export class HotelElement extends Component {
                         <span
                             className="ml-auto badge badge-pill badge-secondary pull-right">1</span>
                     </div>
+                    <hr/>
+                    <button type="button" className="btn btn-sm mb-1 waves-effect waves-light btn-rounded btn-outline-info"><Link to='/tour'>Detail</Link></button>
                 </div>
             </div>
+
         </div>);
     }
 }

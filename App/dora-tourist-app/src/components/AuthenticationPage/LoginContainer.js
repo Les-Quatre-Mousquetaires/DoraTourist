@@ -4,7 +4,7 @@
  */
 import React, {Component} from 'react';
 import LoginComponent from "./LoginComponent";
-import {login} from "../../actions/UserAction";
+import {login} from "../../actions/AuthAction";
 import {connect} from "react-redux";
 import {Redirect} from "react-router-dom";
 
@@ -13,7 +13,8 @@ let redirect;
 class LoginContainer extends Component {
     constructor(props) {
         super(props);
-        redirect = null
+        redirect = null;
+
     }
 
     shouldComponentUpdate(nextProps, nextState, nextContext) {
@@ -35,9 +36,9 @@ class LoginContainer extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        user: state.userReducer
+        user: state.authReducer
     };
-}
+};
 
 const mapDispatchToProps = (dispatch, props) => {
     return {
@@ -45,6 +46,6 @@ const mapDispatchToProps = (dispatch, props) => {
             dispatch(login(user));
         }
     }
-}
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(LoginContainer);

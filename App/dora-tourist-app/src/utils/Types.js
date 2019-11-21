@@ -8,6 +8,8 @@ const REGISTER_USER = 'register_user';
 const VIEW_USER = 'view_user';
 const UPDATE_USER = 'update_user';
 
+const GET_TOURS = 'GET_TOURS';
+const GET_TOUR = 'GET_TOUR';
 export {
-    LOGIN_USER, LOGOUT_USER, REGISTER_USER, VIEW_USER, UPDATE_USER
+    LOGIN_USER, LOGOUT_USER, REGISTER_USER, GET_TOURS, GET_TOUR, VIEW_USER,UPDATE_USER
 }

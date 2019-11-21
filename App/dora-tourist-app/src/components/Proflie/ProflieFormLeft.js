@@ -1,14 +1,29 @@
 import React, {Component} from "react";
+import {connect} from "react-redux";
 
-export class ProfileFormLeft extends Component {
+class ProfileFormLeft extends Component {
 
     render() {
-        //console.log(this.props);
-        let  name = this.props.user.name;
-        let role = this.props.user.role;
-        let email = this.props.user.email;
-        let phonenumber = this.props.user.phoneNumber;
-        let address = this.props.user.location;
+        let  name = "";
+        if(this.props.user.name!==undefined){
+            name = this.props.user.name;
+        }
+        let role = "";
+        if(this.props.user.role!==undefined){
+            role = this.props.user.name;
+        }
+        let email = "";
+        if(this.props.user.email!==undefined){
+            email= this.props.user.email;
+        }
+        let phonenumber = "";
+        if(this.props.user.phoneNumber!==undefined){
+            phonenumber = this.props.user.phoneNumber;
+        }
+        let address = "";
+        if(this.props.user.location!==undefined){
+            address = this.props.user.location;
+        }
         return <div className="col-lg-4 col-xlg-3 col-md-5">
             <div className="card">
                 <div className="card-body">
@@ -50,3 +65,9 @@ export class ProfileFormLeft extends Component {
         </div>;
     }
 }
+const mapStateToProps = (state) => {
+    return {
+        user: state.userReducer
+    };
+};
+export default connect(mapStateToProps) (ProfileFormLeft);

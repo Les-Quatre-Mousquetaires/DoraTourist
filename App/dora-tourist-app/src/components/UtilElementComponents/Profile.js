@@ -1,25 +1,28 @@
 import React, {Component} from 'react';
-import {ProfileFormLeft} from "../Proflie/ProflieFormLeft";
-import {ProfileTagRight} from "../Proflie/ProflieTagRight";
+import ProfileFormLeft from "../Proflie/ProflieFormLeft";
+import ProfileTagRight from "../Proflie/ProflieTagRight";
 import {ServicePanel} from "./ServicePanel";
-import {register, view} from "../../actions/AuthAction";
 import {connect} from "react-redux";
-
+import {view} from "../../actions/UserAction";
+import {} from 'react-router-dom'
 class Profile extends Component {
 
-    componentDidMount() {
-        let{viewUser}=this.props;
-        let user = viewUser();
-        console.log('user Provoder ',user);
+    constructor(props) {
+        super(props);
+        let url = window.location.pathname;
+        //console.log("URL: ",url);
+        let id = url.split('/');
+        //console.log("ID: ",id[2]);
+        let {viewUser} = this.props;
+        viewUser(id[2]);
     }
 
     render() {
-        console.log(this.props);
         return (
             <div>
                 <div className="row">
-                    <ProfileFormLeft user={this.props.user}/>
-                    <ProfileTagRight user={this.props.user}/>
+                    <ProfileFormLeft/>
+                    <ProfileTagRight/>
                 </div>
                 <ServicePanel/>
 
@@ -27,18 +30,18 @@ class Profile extends Component {
         );
     }
 }
+
 const mapStateToProps = (state) => {
     return {
-        user: state.authReducer
+        user: state.userReducer
     };
 };
-
-const mapDispatchToProps = (dispatch, props) => {
+const mapDispatchToProps = (dispatch) => {
     return {
-        viewUser: () => {
-            dispatch(view());
+        viewUser: (id) => {
+            dispatch(view(id));
         }
     }
 };
 
-export default connect(mapStateToProps, mapDispatchToProps) (Profile);
+export default connect(mapStateToProps ,mapDispatchToProps) (Profile);

@@ -5,8 +5,9 @@
 const LOGIN_USER = 'login_user';
 const LOGOUT_USER = 'logout_user';
 const REGISTER_USER = 'register_user';
-const VIEW_USER = 'view_user'
+const VIEW_USER = 'view_user';
+const UPDATE_USER = 'update_user';
 
 export {
-    LOGIN_USER, LOGOUT_USER, REGISTER_USER, VIEW_USER
+    LOGIN_USER, LOGOUT_USER, REGISTER_USER, VIEW_USER, UPDATE_USER
 }

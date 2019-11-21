@@ -1,7 +1,29 @@
 import React, {Component} from "react";
+import {connect} from "react-redux";
+import TabProfileUpdate from "./TabProfileUpdate";
 
-export class ProfileTagRight extends Component {
+class ProfileTagRight extends Component {
     render() {
+        let  name = "";
+        if(this.props.user.name!==undefined){
+            name = this.props.user.name;
+        }
+        let role = "";
+        if(this.props.user.role!==undefined){
+            role = this.props.user.name;
+        }
+        let email = "";
+        if(this.props.user.email!==undefined){
+            email= this.props.user.email;
+        }
+        let phonenumber = "";
+        if(this.props.user.phoneNumber!==undefined){
+            phonenumber = this.props.user.phoneNumber;
+        }
+        let address = "";
+        if(this.props.user.location!==undefined){
+            address = this.props.user.location;
+        }
         return <div className="col-lg-8 col-xlg-9 col-md-7">
             <div className="card">
 
@@ -124,19 +146,19 @@ export class ProfileTagRight extends Component {
                             <div className="row">
                                 <div className="col-md-3 col-xs-6 b-r"><strong>Full Name</strong>
                                     <br/>
-                                    <p className="text-muted">Johnathan Deo</p>
+                                    <p className="text-muted">{name}</p>
                                 </div>
                                 <div className="col-md-3 col-xs-6 b-r"><strong>Mobile</strong>
                                     <br/>
-                                    <p className="text-muted">(123) 456 7890</p>
+                                    <p className="text-muted">{phonenumber}</p>
                                 </div>
                                 <div className="col-md-3 col-xs-6 b-r"><strong>Email</strong>
                                     <br/>
-                                    <p className="text-muted">johnathan@admin.com</p>
+                                    <p className="text-muted">{email}</p>
                                 </div>
                                 <div className="col-md-3 col-xs-6"><strong>Location</strong>
                                     <br/>
-                                    <p className="text-muted">London</p>
+                                    <p className="text-muted">{address}</p>
                                 </div>
                             </div>
                             <hr/>
@@ -191,67 +213,15 @@ export class ProfileTagRight extends Component {
                             </div>
                         </div>
                     </div>
-                    <div className="tab-pane" id="settings" role="tabpanel">
-                        <div className="card-body">
-                            <form className="form-horizontal form-material">
-                                <div className="form-group">
-                                    <label className="col-md-12">Full Name</label>
-                                    <div className="col-md-12">
-                                        <input type="text" placeholder="Johnathan Doe"
-                                               className="form-control form-control-line"/>
-                                    </div>
-                                </div>
-                                <div className="form-group">
-                                    <label htmlFor="example-email" className="col-md-12">Email</label>
-                                    <div className="col-md-12">
-                                        <input type="email" placeholder="johnathan@admin.com"
-                                               className="form-control form-control-line"
-                                               name="example-email" id="example-email"/>
-                                    </div>
-                                </div>
-                                <div className="form-group">
-                                    <label className="col-md-12">Password</label>
-                                    <div className="col-md-12">
-                                        <input type="password" name="password" placeholder="Your password"
-                                               className="form-control form-control-line"/>
-                                    </div>
-                                </div>
-                                <div className="form-group">
-                                    <label className="col-md-12">Phone No</label>
-                                    <div className="col-md-12">
-                                        <input type="text" placeholder="123 456 7890"
-                                               className="form-control form-control-line"/>
-                                    </div>
-                                </div>
-                                <div className="form-group">
-                                    <label className="col-md-12">Message</label>
-                                    <div className="col-md-12">
-                                                    <textarea rows="5"
-                                                              className="form-control form-control-line"/>
-                                    </div>
-                                </div>
-                                <div className="form-group">
-                                    <label className="col-sm-12">Select Country</label>
-                                    <div className="col-sm-12">
-                                        <select className="form-control form-control-line">
-                                            <option>London</option>
-                                            <option>India</option>
-                                            <option>Usa</option>
-                                            <option>Canada</option>
-                                            <option>Thailand</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div className="form-group">
-                                    <div className="col-sm-12">
-                                        <button className="btn btn-success">Update Profile</button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
+                    <TabProfileUpdate/>
                 </div>
             </div>
         </div>;
     }
 }
+const mapStateToProps = (state) => {
+    return {
+        user: state.userReducer
+    };
+};
+export default connect(mapStateToProps, null) (ProfileTagRight);

@@ -25,12 +25,5 @@ const register = (user) => {
         dispatch({type: REGISTER_USER, payload: response});
     }
 };
-const  view = ()=>{
-    let url = 'api/users/'+JSON.parse(localStorage.getItem('user'))._id;
-    console.log(url);
-    return async  dispatch =>{
-        const  response = await  APICaller(url, 'GET',"Hello");
-        dispatch({type: VIEW_USER,payload: response});
-    }
-};
-export {login, logout, register, view}
+
+export {login, logout, register}

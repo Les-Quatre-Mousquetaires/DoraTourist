@@ -58,12 +58,12 @@ const mapDispatchToProps = (dispatch, props) => {
             dispatch(logout());
         }
     }
-}
+};
 
 const mapStateToProps = (state) => {
     return {
         user: state.authReducer
     };
-}
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(NavBarProfile);

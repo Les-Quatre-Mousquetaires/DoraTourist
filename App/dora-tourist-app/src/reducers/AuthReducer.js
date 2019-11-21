@@ -32,8 +32,6 @@ let authReducer = (state = userInitState, action) => {
         case REGISTER_USER:
             let user3 = action.payload.data;
             return user3;
-        case VIEW_USER:
-            return action.payload.data;
         default:
             return state;
     }

@@ -177,87 +177,17 @@ class TourDetailElement extends Component {
                                     <a href="#"><img alt="img" className="thumb-lg img-circle"
                                                      src="../assets/images/users/agent.jpg"/></a>
                                     <h4>{this.props.tour[0].creator.name}</h4>
-                                    <h6>Agent of Property</h6></div>
+                                    <p><b>Hướng dẫn viên</b></p>
+                                </div>
                             </div>
                             <div className="card-body border-top">
                                 <div className="text-center"><i className="fa fa-phone text-danger p-r-10"
                                                                 aria-hidden="true"/> {this.props.tour[0].creator.phoneNumber}
                                     <br/> <i className="fa fa-envelope-o text-danger p-r-10 m-t-10"
                                        aria-hidden="true"/> {this.props.tour[0].creator.email}</div>
-                            </div>
-                            <div className="card-body border-top">
-                                <div className="pd-agent-inq">
-                                    <h5 className="card-title">Request Inquiry</h5>
-                                    <form className="form-horizontal form-agent-inq">
-                                        <div className="form-group row">
-                                            <div className="col-md-12">
-                                                <input type="text" className="form-control" placeholder="Name"/>
-                                            </div>
-                                        </div>
-                                        <div className="form-group row">
-                                            <div className="col-md-12">
-                                                <input type="text" className="form-control" placeholder="Phone"/>
-                                            </div>
-                                        </div>
-                                        <div className="form-group row">
-                                            <div className="col-md-12">
-                                                <input type="email" className="form-control"
-                                                       placeholder="E-Mail"/></div>
-                                        </div>
-                                        <div className="form-group row">
-                                            <div className="col-md-12">
-                                                        <textarea className="form-control" rows="3"
-                                                                  placeholder="Message"/>
-                                            </div>
-                                        </div>
-                                        <div className="form-group row">
-                                            <div className="col-md-12">
-                                                <button type="submit"
-                                                        className="btn btn-primary btn-rounded pull-right">Submit
-                                                    Request
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
+                            </div>                         
                         </div>
-                        <div className="card">
-                            <div className="card-body">
-                                <h5 className="card-title">Community Information</h5>
-                                <div className="table-responsive p-t-10">
-                                    <table className="table">
-                                        <tbody className="text-dark">
-                                        <tr>
-                                            <td>Address</td>
-                                            <td>{this.props.name}
-                                                <br/> Pinecrest, FL</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Price</td>
-                                            <td>&#36; 220,000</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Subdivision</td>
-                                            <td>Matindale</td>
-                                        </tr>
-                                        <tr>
-                                            <td>City</td>
-                                            <td>New York</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Full Bath</td>
-                                            <td>AV</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Half Baths</td>
-                                            <td>NAV</td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
+                        
                     </div>
                 </div>
                 <div className="right-sidebar">

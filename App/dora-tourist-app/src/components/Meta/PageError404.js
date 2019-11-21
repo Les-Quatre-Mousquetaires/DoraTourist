@@ -14,7 +14,7 @@ class PageError404 extends Component {
                             <h1>404</h1>
                             <h3 className="text-uppercase">Page Not Found !</h3>
                             <p className="text-muted m-t-30 m-b-30">ĐANG TÌM CÁI GÌ VẬY BẠN?</p>
-                            <a href="/" className="btn btn-info btn-rounded waves-effect waves-light m-b-40">vỀ NHÀ MẸ GỌI KÌA!!!</a></div>
+                            <a href="/" className="btn btn-info btn-rounded waves-effect waves-light m-b-40">VỀ NHÀ MẸ GỌI KÌA!!!</a></div>
 
                     </div>
                 </section>

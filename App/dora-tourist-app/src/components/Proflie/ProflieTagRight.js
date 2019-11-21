@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import {connect} from "react-redux";
 import TabProfileUpdate from "./TabProfileUpdate";
+import {TagProfileTour} from "./TagProfileTour";
 
 class ProfileTagRight extends Component {
     render() {
@@ -17,111 +18,7 @@ class ProfileTagRight extends Component {
                                                 role="tab">Settings</a></li>
                 </ul>
                 <div className="tab-content">
-                    <div className="tab-pane active" id="home" role="tabpanel">
-                        <div className="card-body">
-                            <div className="profiletimeline">
-                                <div className="sl-item">
-                                    <div className="sl-left"><img src="../assets/images/users/1.jpg"
-                                                                  alt="user" className="img-circle"/></div>
-                                    <div className="sl-right">
-                                        <div><a href="#" className="link">John Doe</a>
-                                            <span className="sl-date">5 minutes ago</span>
-                                            <p>assign a new task <a href="#"> Design
-                                                weblayout</a></p>
-                                            <div className="row">
-                                                <div className="col-lg-3 col-md-6 m-b-20"><img
-                                                    src="../assets/images/big/img1.jpg"
-                                                    className="img-responsive radius"/></div>
-                                                <div className="col-lg-3 col-md-6 m-b-20"><img
-                                                    src="../assets/images/big/img2.jpg"
-                                                    className="img-responsive radius"/></div>
-                                                <div className="col-lg-3 col-md-6 m-b-20"><img
-                                                    src="../assets/images/big/img3.jpg"
-                                                    className="img-responsive radius"/></div>
-                                                <div className="col-lg-3 col-md-6 m-b-20"><img
-                                                    src="../assets/images/big/img4.jpg"
-                                                    className="img-responsive radius"/></div>
-                                            </div>
-                                            <div className="like-comm"><a href="#"
-                                                                          className="link m-r-10">2
-                                                comment</a> <a href="#"
-                                                               className="link m-r-10"><i
-                                                className="fa fa-heart text-danger"></i> 5 Love</a></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <hr/>
-                                <div className="sl-item">
-                                    <div className="sl-left"><img src="../assets/images/users/2.jpg"
-                                                                  alt="user" className="img-circle"/>
-                                    </div>
-                                    <div className="sl-right">
-                                        <div><a href="#" className="link">John Doe</a>
-                                            <span className="sl-date">5 minutes ago</span>
-                                            <div className="m-t-20 row">
-                                                <div className="col-md-3 col-xs-12"><img
-                                                    src="../assets/images/big/img1.jpg" alt="user"
-                                                    className="img-responsive radius"/></div>
-                                                <div className="col-md-9 col-xs-12">
-                                                    <p> Lorem ipsum dolor sit amet, consectetur
-                                                        adipiscing elit. Integer nec odio. Praesent
-                                                        libero. Sed cursus ante dapibus diam. </p> <a
-                                                    href="#"
-                                                    className="btn btn-success"> Design weblayout</a>
-                                                </div>
-                                            </div>
-                                            <div className="like-comm m-t-20"><a
-                                                href="#" className="link m-r-10">2
-                                                comment</a> <a href="#"
-                                                               className="link m-r-10"><i
-                                                className="fa fa-heart text-danger"></i> 5 Love</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <hr/>
-                                <div className="sl-item">
-                                    <div className="sl-left"><img src="../assets/images/users/3.jpg"
-                                                                  alt="user"
-                                                                  className="img-circle"/></div>
-                                    <div className="sl-right">
-                                        <div><a href="#" className="link">John
-                                            Doe</a> <span className="sl-date">5 minutes ago</span>
-                                            <p className="m-t-10"> Lorem ipsum dolor sit amet,
-                                                consectetur adipiscing elit. Integer nec odio.
-                                                Praesent libero. Sed cursus ante dapibus diam. Sed
-                                                nisi. Nulla quis sem at nibh elementum imperdiet.
-                                                Duis sagittis ipsum. Praesent mauris. Fusce nec
-                                                tellus sed augue semper </p>
-                                        </div>
-                                        <div className="like-comm m-t-20"><a
-                                            href="#" className="link m-r-10">2
-                                            comment</a> <a href="#"
-                                                           className="link m-r-10"><i
-                                            className="fa fa-heart text-danger"></i> 5 Love</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <hr/>
-                                <div className="sl-item">
-                                    <div className="sl-left"><img
-                                        src="../assets/images/users/4.jpg" alt="user"
-                                        className="img-circle"/></div>
-                                    <div className="sl-right">
-                                        <div><a href="#" className="link">John
-                                            Doe</a> <span
-                                            className="sl-date">5 minutes ago</span>
-                                            <blockquote className="m-t-10">
-                                                Lorem ipsum dolor sit amet, consectetur
-                                                adipisicing elit, sed do eiusmod tempor
-                                                incididunt
-                                            </blockquote>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <TagProfileTour/>
                     <div className="tab-pane" id="profile" role="tabpanel">
                         <div className="card-body">
                             <div className="row">

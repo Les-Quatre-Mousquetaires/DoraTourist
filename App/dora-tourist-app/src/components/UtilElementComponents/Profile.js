@@ -9,12 +9,6 @@ class Profile extends Component {
 
     constructor(props) {
         super(props);
-        let url = window.location.pathname;
-        //console.log("URL: ",url);
-        let id = url.split('/');
-        //console.log("ID: ",id[2]);
-        let {viewUser} = this.props;
-        viewUser(id[2]);
     }
 
     render() {
@@ -25,23 +19,10 @@ class Profile extends Component {
                     <ProfileTagRight/>
                 </div>
                 <ServicePanel/>
-
             </div>
         );
     }
 }
 
-const mapStateToProps = (state) => {
-    return {
-        user: state.userReducer
-    };
-};
-const mapDispatchToProps = (dispatch) => {
-    return {
-        viewUser: (id) => {
-            dispatch(view(id));
-        }
-    }
-};
 
-export default connect(mapStateToProps ,mapDispatchToProps) (Profile);
+export default Profile;

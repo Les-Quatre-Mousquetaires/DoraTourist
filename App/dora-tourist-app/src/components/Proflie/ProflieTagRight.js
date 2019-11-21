@@ -4,26 +4,7 @@ import TabProfileUpdate from "./TabProfileUpdate";
 
 class ProfileTagRight extends Component {
     render() {
-        let  name = "";
-        if(this.props.user.name!==undefined){
-            name = this.props.user.name;
-        }
-        let role = "";
-        if(this.props.user.role!==undefined){
-            role = this.props.user.name;
-        }
-        let email = "";
-        if(this.props.user.email!==undefined){
-            email= this.props.user.email;
-        }
-        let phonenumber = "";
-        if(this.props.user.phoneNumber!==undefined){
-            phonenumber = this.props.user.phoneNumber;
-        }
-        let address = "";
-        if(this.props.user.location!==undefined){
-            address = this.props.user.location;
-        }
+        let {user} = this.props;
         return <div className="col-lg-8 col-xlg-9 col-md-7">
             <div className="card">
 
@@ -146,19 +127,19 @@ class ProfileTagRight extends Component {
                             <div className="row">
                                 <div className="col-md-3 col-xs-6 b-r"><strong>Full Name</strong>
                                     <br/>
-                                    <p className="text-muted">{name}</p>
+                                    <p className="text-muted">{user.name}</p>
                                 </div>
                                 <div className="col-md-3 col-xs-6 b-r"><strong>Mobile</strong>
                                     <br/>
-                                    <p className="text-muted">{phonenumber}</p>
+                                    <p className="text-muted">{user.phoneNumber}</p>
                                 </div>
                                 <div className="col-md-3 col-xs-6 b-r"><strong>Email</strong>
                                     <br/>
-                                    <p className="text-muted">{email}</p>
+                                    <p className="text-muted">{user.email}</p>
                                 </div>
                                 <div className="col-md-3 col-xs-6"><strong>Location</strong>
                                     <br/>
-                                    <p className="text-muted">{address}</p>
+                                    <p className="text-muted">{user.location}</p>
                                 </div>
                             </div>
                             <hr/>

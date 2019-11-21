@@ -13,19 +13,16 @@ class TabProfileUpdate extends Component {
             phoneNumber: 0,
             location: ""
         };
-        let url = window.location.pathname;
-        let id = url.split('/');
         let {viewUser} = this.props;
-
-        viewUser(id[2]);
+        let id = window.location.pathname.split('/')[2];
+        viewUser(id);
     }
 
     componentWillReceiveProps(nextProps, nextContext) {
         this.setState({
-            ...this.props.user
+            ...nextProps.user
         });
     }
-
 
     onChange = (event) => {
         let {name, value} = event.target;
@@ -41,7 +38,6 @@ class TabProfileUpdate extends Component {
             ...user,
             _id: this.props._id
         };
-        console.log(user);
         if (!user.name || !user.phoneNumber || !user.password) {
             window.alert("Vui lòng nhập đủ");
         } else {

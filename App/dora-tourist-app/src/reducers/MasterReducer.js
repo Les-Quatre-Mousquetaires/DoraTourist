@@ -4,9 +4,10 @@
  */
 import {combineReducers} from "redux";
 import userReducer from "./UserReducer";
+import tourReducer from "./TourReducer";
 
 const masterReducer = combineReducers({
-    userReducer
+    userReducer, tourReducer
 });
 
 export default masterReducer;

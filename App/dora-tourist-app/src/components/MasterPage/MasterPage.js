@@ -16,7 +16,7 @@ class MasterPage extends Component {
     render() {
         return (
             <div>
-                {/*<Preloader/>*/}
+                {/* <Preloader/> */}
                 <div id="main-wrapper">
                     <Header/>
                     <LeftSideBar/>

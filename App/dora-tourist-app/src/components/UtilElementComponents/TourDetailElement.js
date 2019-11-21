@@ -1,6 +1,16 @@
 import React, {Component} from 'react';
+import { GetTour } from '../../actions/TourAction';
+import { connect } from 'react-redux';
 
 class TourDetailElement extends Component {
+    constructor(props) {
+        super(props);
+        let {loadTour} = this.props;
+        loadTour(this.props.match.params.id);
+    }
+
+
+  
     render() {
         return (
             <div>
@@ -42,28 +52,20 @@ class TourDetailElement extends Component {
                                     </a>
                                 </div>
                                 <div className="p-t-20 p-b-20">
-                                    <h4 className="card-title">Florida 5, Pinecrest, FL</h4>
+                                    <h4 className="card-title">{this.props.tour[0].name}</h4>
                                     <h5 className="m-b-0"><span className="text-muted"><i
-                                        className="fa fa-map-marker text-danger m-r-10" aria-hidden="true"/>New York City / Brooklyn</span>
+                                        className="fa fa-map-marker text-danger m-r-10" aria-hidden="true"/>{this.props.tour[0].location}</span>
                                     </h5>
                                 </div>
                                 <hr className="m-0"/>
-                                <p className="text-dark p-t-20 pro-desc"> Lorem ipsum dolor sit amet,
-                                    consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices
-                                    accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla
-                                    augue. Rorem psum dolor sit amet, consectetur adipiscing elit.
-                                    Vestibulum tincidunt est vitae ultrices accumsan.
-                                    <br/>
-                                    <br/>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                    Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare
-                                    lacus adipiscing, posuere.</p>
+                                <p className="text-dark p-t-20 pro-desc"> {this.props.tour[0].description}</p>
                             </div>
                         </div>
                         <div className="row">
                             <div className="col-sm-6">
                                 <div className="card">
                                     <div className="card-body">
-                                        <h5 className="card-title">Amenities</h5>
+                                        {/* <h5 className="card-title">Amenities</h5>
                                         <hr className="m-0 p-10"/>
                                         <div className="d-flex fa fa-check-circle text-success p-b-10">
                                             <h6 className="m-l-10 text-dark">Private Space</h6>
@@ -91,41 +93,32 @@ class TourDetailElement extends Component {
                                         </div>
                                         <div className="d-flex fa fa-check-circle text-success p-b-10">
                                             <h6 className="m-l-10 text-dark">Laundry</h6>
-                                        </div>
+                                        </div> */}
+                                        <h5>Advantages</h5>
+                                        {this.props.tour[0].advantages.map((a,i) => 
+                                          <div key={i} className="d-flex fa fa-check-circle text-success p-b-10">
+                                              <h6 className="m-l-10 text-dark">{a}</h6>
+                                          </div>  
+                                        )}
                                     </div>
                                 </div>
                             </div>
                             <div className="col-sm-6">
                                 <div className="card">
                                     <div className="card-body">
-                                        <h5 className="card-title">Room Dimensions</h5>
+                                        <h5 className="card-title">Information</h5>
                                         <div className="table-responsive p-t-10 border-top">
                                             <table className="table no-border">
                                                 <tbody className="text-dark">
                                                 <tr>
-                                                    <td>Dining Room</td>
-                                                    <td>8x8</td>
+                                                    <td>Days</td>
+                                                    <td>{this.props.tour[0].info.days}</td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Kitchen</td>
-                                                    <td>10x12</td>
+                                                    <td>Max Person</td>
+                                                    <td>{this.props.tour[0].info.maxPerson}</td>
                                                 </tr>
-                                                <tr>
-                                                    <td>Living Room</td>
-                                                    <td>12x15</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Master Bedroom</td>
-                                                    <td>12x10.2</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Bedroom 2</td>
-                                                    <td>11x9</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Other Room 1</td>
-                                                    <td>8x8</td>
-                                                </tr>
+                                                
                                                 </tbody>
                                             </table>
                                         </div>
@@ -153,12 +146,8 @@ class TourDetailElement extends Component {
                                     <table className="table no-border">
                                         <tbody className="text-dark">
                                         <tr>
-                                            <td>MLS</td>
-                                            <td>V254680</td>
-                                        </tr>
-                                        <tr>
                                             <td>Price</td>
-                                            <td>&#36; 220,000</td>
+                                            <td>&#36; {this.props.tour[0].price}</td>
                                         </tr>
                                         <tr>
                                             <td>Bedrooms</td>
@@ -169,33 +158,10 @@ class TourDetailElement extends Component {
                                             <td>5</td>
                                         </tr>
                                         <tr>
-                                            <td>Full Baths</td>
-                                            <td>3</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Half Baths</td>
-                                            <td>2</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Square Footage</td>
-                                            <td>2,123</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Lot SQFT</td>
-                                            <td>256</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Year Built</td>
-                                            <td>2012</td>
-                                        </tr>
-                                        <tr>
                                             <td>Type</td>
                                             <td>Single Family</td>
                                         </tr>
-                                        <tr>
-                                            <td>Style</td>
-                                            <td>Bi-Level</td>
-                                        </tr>
+                                        
                                         <tr>
                                             <td>Status</td>
                                             <td>Active</td>
@@ -210,14 +176,14 @@ class TourDetailElement extends Component {
                                 <div className="text-center">
                                     <a href="#"><img alt="img" className="thumb-lg img-circle"
                                                      src="../assets/images/users/agent.jpg"/></a>
-                                    <h4>Jon Doe</h4>
+                                    <h4>{this.props.tour[0].creator.name}</h4>
                                     <h6>Agent of Property</h6></div>
                             </div>
                             <div className="card-body border-top">
                                 <div className="text-center"><i className="fa fa-phone text-danger p-r-10"
-                                                                aria-hidden="true"/> 800-1800-24657
+                                                                aria-hidden="true"/> {this.props.tour[0].creator.phoneNumber}
                                     <br/> <i className="fa fa-envelope-o text-danger p-r-10 m-t-10"
-                                             aria-hidden="true"/> jon@realestate.com</div>
+                                       aria-hidden="true"/> {this.props.tour[0].creator.email}</div>
                             </div>
                             <div className="card-body border-top">
                                 <div className="pd-agent-inq">
@@ -264,7 +230,7 @@ class TourDetailElement extends Component {
                                         <tbody className="text-dark">
                                         <tr>
                                             <td>Address</td>
-                                            <td>Florida 5,
+                                            <td>{this.props.name}
                                                 <br/> Pinecrest, FL</td>
                                         </tr>
                                         <tr>
@@ -381,4 +347,19 @@ class TourDetailElement extends Component {
     }
 }
 
-export default TourDetailElement;
+const MapStateToProps = (state) => {
+    return {
+        tour: state.tourReducer
+    }
+}
+
+const MapDispatchToProps = (dispatch, props) => {
+    return {
+        loadTour: (id) => {
+            dispatch(GetTour(id));
+        } 
+    }
+}
+
+
+export default connect(MapStateToProps, MapDispatchToProps)(TourDetailElement);

@@ -10,12 +10,13 @@ import PageError404 from "../components/Meta/PageError404";
 import TourDetailElement from "../components/UtilElementComponents/TourDetailElement";
 import DashBoard from "../components/UtilElementComponents/DashBoard";
 import Profile from "../components/UtilElementComponents/Profile";
+import TourContainer from '../components/HomePage/TourContainer';
 
 const homeContentRoutes = [
     {
         path: '/',
         exact: true,
-        main: () => <HomeContent/>
+        main: () => <TourContainer/>
     },{
         path: '/test',
         exact: true,
@@ -25,9 +26,9 @@ const homeContentRoutes = [
         exact: true,
         main: () => <TestRoute2/>
     },{
-        path: '/tour',
+        path: '/tours/:id',
         exact: false,
-        main: () => <TourDetailElement/>
+        main: ({match}) => <TourDetailElement match={match}/>
     },
     {
         path: '/dashboard',

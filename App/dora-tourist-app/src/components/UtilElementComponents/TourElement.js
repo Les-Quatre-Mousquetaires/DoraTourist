@@ -1,8 +1,27 @@
 import React, {Component} from "react";
 import {Link} from "react-router-dom";
+import { connect } from "react-redux";
+import { GetTour } from "../../actions/TourAction";
 
-export class HotelElement extends Component {
+export class TourElement extends Component {
+    
+    constructor(props) {
+        super(props);
+        let t = this.props.data;
+
+        this.state = {
+            id: t._id,
+            name: t.name,
+            description: t.description,
+            comments: t.comments,
+            creator: t.creator,
+            price: t.price
+        }      
+
+    }
+
     render() {
+        let link = `tours/` + this.state.id;
         return (<div className="col-lg-3 col-md-6">
             <div className="card">
                 <img className="card-img-top" src="/assets/images/property/prop1.jpeg"
@@ -11,8 +30,8 @@ export class HotelElement extends Component {
                     <span className="badge badge-danger badge-pill">For Rent</span>
                 </div>
                 <div className="card-body bg-light">
-                    <h4 className="card-title">Florida 5, Pinecrest, FL</h4>
-                    <h4 className="text-primary">&#36; 220,000</h4>
+                    <h4 className="card-title">{this.state.name}</h4>
+                    <h4 className="text-primary">&#36; {this.state.price}</h4>
                 </div>
                 <div className="card-body border-top">
                     <div className="d-flex no-block align-items-center">
@@ -34,10 +53,12 @@ export class HotelElement extends Component {
                             className="ml-auto badge badge-pill badge-secondary pull-right">1</span>
                     </div>
                     <hr/>
-                    <button type="button" className="btn btn-sm mb-1 waves-effect waves-light btn-rounded btn-outline-info"><Link to='/tour'>Detail</Link></button>
+                   
+                    <Link className="btn btn-sm mb-1 waves-effect waves-light btn-rounded btn-outline-info" to={link}>Detail</Link>
+                    
                 </div>
             </div>
-
         </div>);
     }
 }
+

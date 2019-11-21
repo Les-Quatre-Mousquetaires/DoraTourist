@@ -1,18 +1,29 @@
 import React, {Component} from "react";
-import {HotelElement} from "../UtilElementComponents/HotelElement";
+import {TourElement} from "../UtilElementComponents/TourElement";
+import {connect} from 'react-redux';
+
+
 
 export class HomeContent extends Component {
+    constructor(props) {
+        super(props);
+    }
+   
     componentDidMount() {
         document.title = "Home - Doratourist";
+        let {loadTours} = this.props.dispatch;
+        loadTours();  
     }
 
     render() {
-        return <div className="row">
-            <HotelElement/>
-            <HotelElement/>
-            <HotelElement/>
-            <HotelElement/>
-            <HotelElement/>
-        </div>;
+        let tours = this.props.tours.map(t => 
+            <TourElement data={t} key ={t._id}/>);
+        return(
+            <div className="row">
+                {tours}
+            </div>
+            
+        )
+
     }
 }

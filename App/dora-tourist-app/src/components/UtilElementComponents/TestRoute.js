@@ -3,7 +3,7 @@
  * Email: tranphuquy19@gmail.com
  */
 import React, {Component} from 'react';
-import {HotelElement} from "./HotelElement";
+import {TourElement} from "./TourElement";
 
 class TestRoute extends Component {
     render() {

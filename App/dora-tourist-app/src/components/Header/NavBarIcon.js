@@ -12,8 +12,7 @@ export class NavBarIcon extends Component {
                 </b>
                 <span className="hidden-xs "><span
                     className="font-bold pl-2" style={{fontSize:'1.4rem'}}>Dora</span><span className="">tourist</span></span>
-            </Link>
-            
+            </Link>            
         </div>;
     }
 }

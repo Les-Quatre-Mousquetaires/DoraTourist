@@ -5,9 +5,10 @@
 import {combineReducers} from "redux";
 import authReducer from "./AuthReducer";
 import userReducer from "./UserReducer";
+import tourReducer from "./TourReducer";
 
 const masterReducer = combineReducers({
-    authReducer, userReducer
+    authReducer, userReducer, tourReducer
 });
 
 export default masterReducer;

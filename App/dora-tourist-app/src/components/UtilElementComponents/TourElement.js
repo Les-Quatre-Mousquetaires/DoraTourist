@@ -24,7 +24,7 @@ export class TourElement extends Component {
         let link = `tours/` + this.state.id;
         return (<div className="col-lg-3 col-md-6">
             <div className="card">
-                <img className="card-img-top" src="/assets/images/property/prop1.jpeg"
+                <img className="card-img-top" src="/assets/images/huan/1.jpg"
                      alt="Card image cap"/>
                 <div className="card-img-overlay">
                     <span className="badge badge-danger badge-pill">For Rent</span>

@@ -16,6 +16,7 @@ const GET_COMMENTS = 'GET_COMMENTS';
 
 const CREATE_BOOK = 'create_book';
 
+const SET_FILTER_PARAMS = 'SET_FILTER_PARAMS';
 export {
     LOGIN_USER,
     LOGOUT_USER,
@@ -26,5 +27,6 @@ export {
     UPDATE_USER,
     GET_BOOKS_USER,
     GET_COMMENTS,
-    CREATE_BOOK
+    CREATE_BOOK,
+    SET_FILTER_PARAMS
 }

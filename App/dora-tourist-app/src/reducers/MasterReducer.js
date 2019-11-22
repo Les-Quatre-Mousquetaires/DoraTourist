@@ -7,9 +7,10 @@ import authReducer from "./AuthReducer";
 import userReducer from "./UserReducer";
 import tourReducer from "./TourReducer";
 import bookReducer from "./BookReducer";
+import commentReducer from "./CommentReducer";
 
 const masterReducer = combineReducers({
-    authReducer, userReducer, tourReducer, bookReducer
+    authReducer, userReducer, tourReducer, bookReducer, commentReducer
 });
 
 export default masterReducer;

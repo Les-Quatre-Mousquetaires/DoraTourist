@@ -35,21 +35,15 @@ export class TourElement extends Component {
                 <div className="card-body border-top">
                     <div className="d-flex no-block align-items-center">
                         <span><img src="/assets/images/property/pro-bath.png"/></span>
-                        <span className="p-10 text-muted">Bathrooms</span>
+                        <span className="p-10 text-muted">Phòng tắm</span>
                         <span
-                            className="ml-auto badge badge-pill badge-secondary pull-right">2</span>
+                            className="ml-auto badge badge-pill badge-secondary pull-right">1</span>
                     </div>
                     <div className="d-flex no-block align-items-center">
                         <span><img src="/assets/images/property/pro-bed.png"/></span>
-                        <span className="p-10 text-muted">Beds</span>
+                        <span className="p-10 text-muted">Giường</span>
                         <span
                             className="ml-auto badge badge-pill badge-secondary pull-right">2</span>
-                    </div>
-                    <div className="d-flex no-block align-items-center">
-                        <span><img src="/assets/images/property/pro-garage.png"/></span>
-                        <span className="p-10 text-muted">Garages</span>
-                        <span
-                            className="ml-auto badge badge-pill badge-secondary pull-right">1</span>
                     </div>
                     <hr/>
                    

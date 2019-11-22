@@ -8,12 +8,12 @@ import config from "./configs";
 import headerHeper from "./HeaderHelper";
 
 let APICaller = (endpoint, method = 'GET', body) => {
-    console.log(headerHeper);
+    console.log(headerHeper());
     return axios({
         method: method,
         url: `${config.API_URL}/${endpoint}`,
         data: body,
-        headers: headerHeper
+        headers: headerHeper()
     });
 };
 

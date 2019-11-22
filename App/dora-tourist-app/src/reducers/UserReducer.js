@@ -2,7 +2,7 @@
  * Created by @tranphuquy19 on 20/11/2019
  * Email: tranphuquy19@gmail.com
  */
-import {LOGIN_USER, LOGOUT_USER, REGISTER_USER, UPDATE_USER, VIEW_USER} from "../utils/Types";
+import {GET_BOOKS_USER, LOGIN_USER, LOGOUT_USER, REGISTER_USER, UPDATE_USER, VIEW_USER} from "../utils/Types";
 
 let userLogged = JSON.parse(localStorage.getItem('user'));
 let userNull = {

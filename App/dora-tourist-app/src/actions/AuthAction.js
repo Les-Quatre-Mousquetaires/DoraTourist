@@ -14,7 +14,16 @@ const login = (user) => {
 };
 const logout = () => {
     return async dispatch => {
-        localStorage.removeItem('user');
+        let removeUser = {
+            comments: [],
+            email: "",
+            name: "",
+            role: "",
+            token: "",
+            tours: [],
+            _id: ""
+        }
+        localStorage.setItem('user', JSON.stringify(removeUser));
         dispatch({type: LOGOUT_USER});
     }
 };

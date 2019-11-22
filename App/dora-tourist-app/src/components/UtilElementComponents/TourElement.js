@@ -1,7 +1,5 @@
 import React, {Component} from "react";
 import {Link} from "react-router-dom";
-import { connect } from "react-redux";
-import { GetTour } from "../../actions/TourAction";
 
 export class TourElement extends Component {
     
@@ -12,6 +10,7 @@ export class TourElement extends Component {
         this.state = {
             id: t._id,
             name: t.name,
+            image: t.image,
             description: t.description,
             comments: t.comments,
             creator: t.creator,
@@ -24,7 +23,7 @@ export class TourElement extends Component {
         let link = `tours/` + this.state.id;
         return (<div className="col-lg-3 col-md-6">
             <div className="card">
-                <img className="card-img-top" src="/assets/images/huan/1.jpg"
+                <img className="card-img-top" src={this.state.image}
                      alt="Card image cap"/>
                 <div className="card-img-overlay">
                     <span className="badge badge-danger badge-pill">For Rent</span>

@@ -13,7 +13,7 @@ export class NavBarMessage extends Component {
                  aria-labelledby="2">
                 <ul>
                     <li>
-                        <div className="drop-title">You have 4 new messages</div>
+                        <div className="drop-title">Bạn có 4 thông báo</div>
                     </li>
                     <li>
                         <div className="message-center">
@@ -24,8 +24,8 @@ export class NavBarMessage extends Component {
                                     className="profile-status online pull-right"/>
                                 </div>
                                 <div className="mail-contnet">
-                                    <h5>Pavan kumar</h5> <span
-                                    className="mail-desc">Just see the my admin!</span>
+                                    <h5>Thông báo 1</h5> <span
+                                    className="mail-desc">nội dung....</span>
                                     <span className="time">9:30 AM</span>
                                 </div>
                             </a>

@@ -3,6 +3,7 @@ import {GetTour} from '../../actions/TourAction';
 import {connect} from 'react-redux';
 import CommentRow from "./CommentRow";
 import {getComments} from "../../actions/CommentAction";
+import {Link} from "react-router-dom";
 
 class TourDetailElement extends Component {
     constructor(props) {
@@ -13,9 +14,10 @@ class TourDetailElement extends Component {
     }
 
     render() {
-        let renderCommentRow = this.props.comments.map((comment, index)=> {
+        let renderCommentRow = this.props.comments.map((comment, index) => {
             return <CommentRow key={index} comment={comment}/>;
         });
+        let linkTo = `/booking/${this.props.match.params.id}`;
         return (
             <div>
                 <div className="row">
@@ -59,8 +61,13 @@ class TourDetailElement extends Component {
                                     <h4 className="card-title">{this.props.tour[0].name}</h4>
                                     <h5 className="m-b-0"><span className="text-muted"><i
                                         className="fa fa-map-marker text-danger m-r-10"
-                                        aria-hidden="true"/>{this.props.tour[0].location}</span>
+                                        aria-hidden="true"/>{this.props.tour[0].location}
+                                        <Link to={linkTo}
+                                              className="ml-5 btn waves-effect waves-light btn-rounded btn-primary">Book Now
+                                    </Link>
+                                    </span>
                                     </h5>
+
                                 </div>
                                 <hr className="m-0"/>
                                 <p className="text-dark p-t-20 pro-desc"> {this.props.tour[0].description}</p>

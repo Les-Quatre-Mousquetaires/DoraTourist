@@ -9,6 +9,8 @@
     <meta name="author" content="">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon.png">
     <link href="/assets/node_modules/bootstrap-select/bootstrap-select.min.css" rel="stylesheet"/>
+    <link href="/assets/node_modules/register-steps/steps.css" rel="stylesheet">
+    <link href="/dist/css/pages/register3.css" rel="stylesheet">
     <link href="/dist/css/style.min.css" rel="stylesheet">
 </head>
 
@@ -26,6 +28,18 @@
 <script type="text/javascript" src="/dist/js/custom.min.js"></script>
 <script type="text/javascript" src="/assets/node_modules/bootstrap-select/bootstrap-select.min.js"></script>
 
+<script src="../assets/node_modules/register-steps/jquery.easing.min.js"></script>
+<script src="../assets/node_modules/register-steps/register-init.js"></script>
+
+<script type="text/javascript">
+    $(function() {
+        $('[data-toggle="tooltip"]').tooltip()
+    });
+    $('#to-recover').on("click", function() {
+        $("#loginform").slideUp();
+        $("#recoverform").fadeIn();
+    });
+</script>
 </body>
 
 </html>

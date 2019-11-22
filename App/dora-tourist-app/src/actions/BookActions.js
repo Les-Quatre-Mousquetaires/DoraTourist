@@ -3,7 +3,7 @@
  * Email: tranphuquy19@gmail.com
  */
 import APICaller from "../utils/APICaller";
-import {GET_BOOKS_USER} from "../utils/Types";
+import {CREATE_BOOK, GET_BOOKS_USER} from "../utils/Types";
 
 const getBooks = () => {
     return async dispatch => {
@@ -11,4 +11,11 @@ const getBooks = () => {
         dispatch({type: GET_BOOKS_USER, payload: response});
     }
 }
-export {getBooks}
+
+const createBook = (book)=> {
+    return async dispatch => {
+        const response = await APICaller('api/booking', 'POST', book);
+        dispatch({type: CREATE_BOOK, payload: response});
+    }
+}
+export {getBooks, createBook}

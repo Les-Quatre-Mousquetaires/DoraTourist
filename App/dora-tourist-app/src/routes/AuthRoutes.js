@@ -3,10 +3,8 @@
  * Email: tranphuquy19@gmail.com
  */
 import React from 'react';
-import LoginComponent from "../components/AuthenticationPage/LoginComponent";
 import RegisterComponent from "../components/AuthenticationPage/RegisterComponent";
 import MasterPage from "../components/MasterPage/MasterPage";
-import PageError404 from "../components/Meta/PageError404";
 import LoginContainer from "../components/AuthenticationPage/LoginContainer";
 import BookingPage from "../components/UtilElementComponents/BookingPage";
 
@@ -20,9 +18,9 @@ const authRoutes = [
         exact: true,
         main: () => <RegisterComponent/>
     }, {
-        path: '/booking',
+        path: '/booking/:id',
         exact: false,
-        main: () => <BookingPage/>
+        main: ({match}) => <BookingPage match={match}/>
     },{
         path: '/',
         exact: false,

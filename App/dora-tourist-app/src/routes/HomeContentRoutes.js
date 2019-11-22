@@ -12,6 +12,7 @@ import DashBoard from "../components/UtilElementComponents/DashBoard";
 import Profile from "../components/UtilElementComponents/Profile";
 import TourContainer from '../components/HomePage/TourContainer';
 
+
 const homeContentRoutes = [
     {
         path: '/',
@@ -28,7 +29,7 @@ const homeContentRoutes = [
     },{
         path: '/tours/:id',
         exact: false,
-        main: ({match}) => <TourDetailElement match={match}/>
+        main: ({match}) => <TourDetailElement match={match} />
     },
     {
         path: '/dashboard',

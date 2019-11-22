@@ -1,5 +1,6 @@
-import { GET_TOURS, GET_TOUR } from "../utils/Types";
+import { GET_TOURS, GET_TOUR, SET_FILTER_PARAMS } from "../utils/Types";
 import APICaller from "../utils/APICaller";
+import { get } from "lodash";
 
 const GetTours = () => {
     return async dispatch => {
@@ -17,6 +18,17 @@ const GetTour = (id) => {
     }
 }
 
+const SetFilterParams = (searchValue) => {
+    return async dispatch => {
+        dispatch({
+            type: SET_FILTER_PARAMS, 
+            payload: searchValue
+        });
+    };
+}
 
 
-export {GetTours, GetTour}
+
+
+
+export {GetTours, GetTour, SetFilterParams}

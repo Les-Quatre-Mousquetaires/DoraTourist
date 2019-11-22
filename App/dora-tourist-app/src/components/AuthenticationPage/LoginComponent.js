@@ -4,6 +4,7 @@
  */
 import React, {Component} from 'react';
 import APICaller from "../../utils/APICaller";
+import RegisterComponent from './RegisterComponent';
 
 class LoginComponent extends Component {
     constructor(props) {
@@ -45,13 +46,13 @@ class LoginComponent extends Component {
                             <div className="login-box card">
                                 <div className="card-body">
                                     <form onSubmit={this.onSubmit} className="form-horizontal form-material"
-                                          id="loginform">
+                                          id="loginform" autoComplete="off">
                                         <h3 className="text-center m-b-20">Sign In</h3>
                                         <div className="form-group">
                                             <div className="col-xs-12">
                                                 <input className="form-control" name="email" type="text" required=""
                                                        onChange={this.onChange}
-                                                       placeholder="Email"/>
+                                                       placeholder="Email" autoComplete="false"/>
                                             </div>
                                         </div>
 
@@ -60,7 +61,7 @@ class LoginComponent extends Component {
                                                 <input className="form-control" name="password" type="password"
                                                        required=""
                                                        onChange={this.onChange}
-                                                       placeholder="Password"/>
+                                                       placeholder="Password" autoComplete="false"/>
                                             </div>
                                         </div>
                                         <div className="form-group row">
@@ -84,8 +85,8 @@ class LoginComponent extends Component {
                                         </div>
                                         <div className="form-group m-b-0">
                                             <div className="col-sm-12 text-center">
-                                                Don't have an account? <a href="#"
-                                                                          className="text-info m-l-5"><b>Sign Up</b></a>
+                                                Don't have an account? 
+                                                <a href="/register" className="text-info m-l-5"><b>Sign Up</b></a>
                                             </div>
                                         </div>
                                     </form>

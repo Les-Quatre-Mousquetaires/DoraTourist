@@ -15,13 +15,15 @@ export class TourElement extends Component {
             description: t.description,
             comments: t.comments,
             creator: t.creator,
-            price: t.price
+            price: t.price,
+            image: t.image
         }      
 
     }
 
     render() {
         let link = `tours/` + this.state.id;
+        let imageURL = this.state.image;
         return (<div className="col-lg-3 col-md-6">
             <div className="card">
                 <img className="card-img-top" src="/assets/images/property/prop1.jpeg"

@@ -6,14 +6,16 @@ import React, {Component} from 'react';
 import {Preloader} from "../Meta/Preloader";
 import {Header} from "../Header/Header";
 import {LeftSideBar} from "../LeftSideBar/LeftSideBar";
-import {HomeSearchBar} from "../HomePage/HomeSearchBar";
+
 import homeContentRoutes from "../../routes/HomeContentRoutes";
 import {HomeRightSideBar} from "../HomePage/HomeRightSideBar";
 import renderRoutes from "../../utils/RouteUtil";
+import HomeSearchBar from '../HomePage/HomeSearchBar';
 
 class MasterPage extends Component {
 
     render() {
+        const currentPath = window.location.pathname;        
         return (
             <div>
                 {/* <Preloader/> */}
@@ -22,8 +24,9 @@ class MasterPage extends Component {
                     <LeftSideBar/>
                     <div className="page-wrapper">
                         <div className="container-fluid">
-                            <HomeSearchBar/>
-
+                            {/* <HomeSearchBar /> */}
+                            { !currentPath.includes('/tours/') && !currentPath.includes('profile') ? <HomeSearchBar /> : null}
+                            
                             {/*body content here!*/}
                             {renderRoutes(homeContentRoutes, true)}
 

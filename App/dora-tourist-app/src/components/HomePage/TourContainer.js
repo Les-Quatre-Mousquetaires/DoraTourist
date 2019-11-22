@@ -8,8 +8,9 @@ class TourContainer extends Component {
     constructor(props) {
         super(props);
     }
-
+    
     render() {
+        
         return (
             <div>
                 <HomeContent tours={ this.props.tours } dispatch={this.props} />

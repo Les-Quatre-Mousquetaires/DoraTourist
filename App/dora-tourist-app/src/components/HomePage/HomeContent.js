@@ -8,13 +8,13 @@ export class HomeContent extends Component {
     constructor(props) {
         super(props);
     }
-   
+    
     componentDidMount() {
         document.title = "Home - Doratourist";
         let {loadTours} = this.props.dispatch;
         loadTours();  
     }
-
+    
     render() {
         let tours = this.props.tours.map(t => 
             <TourElement data={t} key ={t._id}/>);
@@ -22,8 +22,6 @@ export class HomeContent extends Component {
             <div className="row">
                 {tours}
             </div>
-            
         )
-
     }
 }

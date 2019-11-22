@@ -58,30 +58,30 @@ class RegisterComponent extends Component {
                                  style={{backgroundImage: `url(${"/assets/images/background/login-register.jpg"})`}}>
                                 <div className="login-box card">
                                     <div className="card-body">
-                                        <form onSubmit={this.onSubmit} className="form-horizontal form-material" id="loginform">
+                                        <form onSubmit={this.onSubmit} className="form-horizontal form-material" id="loginform" autoComplete="off">
                                             <h3 className="text-center m-b-20">Sign Up</h3>
                                             <div className="form-group">
                                                 <div className="col-xs-12">
                                                     <input className="form-control" type="text" name="name" onChange={this.onChange}  required=""
-                                                           placeholder="Name"/>
+                                                           placeholder="Name" autoComplete="off" />
                                                 </div>
                                             </div>
                                             <div className="form-group ">
                                                 <div className="col-xs-12">
                                                     <input className="form-control" name="email" onChange={this.onChange} type="text" required=""
-                                                           placeholder="Email"/>
+                                                           placeholder="Email" autoComplete="false" />
                                                 </div>
                                             </div>
                                             <div className="form-group ">
                                                 <div className="col-xs-12">
                                                     <input className="form-control" onChange={this.onChange} name="password" type="password" required=""
-                                                           placeholder="Password"/>
+                                                           placeholder="Password" autoComplete="false" />
                                                 </div>
                                             </div>
                                             <div className="form-group">
                                                 <div className="col-xs-12">
                                                     <input className="form-control" type="password" required=""
-                                                           placeholder="Confirm Password"/>
+                                                           placeholder="Confirm Password" autoComplete="false" />
                                                 </div>
                                             </div>
                                             <div className="form-group row">
@@ -104,7 +104,7 @@ class RegisterComponent extends Component {
                                             </div>
                                             <div className="form-group m-b-0">
                                                 <div className="col-sm-12 text-center">
-                                                    Already have an account? <a href="#"
+                                                    Already have an account? <a href="/login"
                                                                                 className="text-info m-l-5"><b>Sign
                                                     In</b></a>
                                                 </div>

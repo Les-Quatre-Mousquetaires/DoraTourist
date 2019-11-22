@@ -1,6 +1,11 @@
 import React, {Component} from 'react';
+import TourListDashboard from "../Dashboard/TourListDashboard";
+import DashboardBookingOverview from "../Dashboard/DashboardBookingOverview";
 
 class DashBoard extends Component {
+    constructor(props){
+        super(props);
+    }
     render() {
         return (
             <div>
@@ -58,161 +63,9 @@ class DashBoard extends Component {
                         </div>
                     </div>
                 </div>
+                <DashboardBookingOverview/>
                 <div className="row">
-                    <div className="col-lg-8">
-                        <div className="card">
-                            <div className="card-body">
-                                <div className="d-flex m-b-40 align-items-center">
-                                    <h5 className="card-title">PROPERTIES STATS</h5>
-                                    <div className="ml-auto">
-                                        <ul className="list-inline font-12">
-                                            <li><i className="fa fa-circle text-cyan"/> For Sale</li>
-                                            <li><i className="fa fa-circle text-primary"/> For Rent</li>
-                                            <li><i className="fa fa-circle text-purple"/> All</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div id="morris-bar-chart" style={{height:"352px"}}/>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-lg-4">
-                        <div className="row">
-                            <div className="col-md-12">
-                                <div className="card m-b-15">
-                                    <div className="card-body">
-                                        <h5 className="card-title">PROPERTY SALES INCOME</h5>
-                                        <div className="row">
-                                            <div className="col-6 m-t-30">
-                                                <h1 className="text-info">$64057</h1>
-                                                <p className="text-muted">APRIL 2017</p> <b>(150 Sales)</b>
-                                            </div>
-                                            <div className="col-6">
-                                                <div id="sparkline2dash" className="text-right"/>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-md-12">
-                                <div className="card bg-purple m-b-15">
-                                    <div className="card-body">
-                                        <h5 className="text-white card-title">PROPERTY ON RENT INCOME</h5>
-                                        <div className="row">
-                                            <div className="col-6 m-t-30">
-                                                <h1 className="text-white">$30447</h1>
-                                                <p className="text-white">APRIL 2017</p> <b
-                                                className="text-white">(110 Sales)</b></div>
-                                            <div className="col-md-6 col-sm-6 col-6">
-                                                <div id="sales1" className="text-right"/>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="row">
-                    <div className="col-lg-12">
-                        <div className="card">
-                            <div className="card-body">
-                                <h5 className="card-title">PROPERTY OVERVIEW</h5>
-                                <div className="table-responsive">
-                                    <table className="table product-overview">
-                                        <thead>
-                                        <tr>
-                                            <th>Customer</th>
-                                            <th>Order ID</th>
-                                            <th>Photo</th>
-                                            <th>Property</th>
-                                            <th>Type</th>
-                                            <th>Date</th>
-                                            <th>Status</th>
-                                            <th>Actions</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        <tr>
-                                            <td>Steave Jobs</td>
-                                            <td>#85457898</td>
-                                            <td><img src="../assets/images/property/prop1.jpeg" alt="iMac"
-                                                     width="80"/></td>
-                                            <td>Swanim villa</td>
-                                            <td>Sold</td>
-                                            <td>10-7-2017</td>
-                                            <td><span
-                                                className="label label-success font-weight-100">Paid</span>
-                                            </td>
-                                            <td><a href="#" className="text-dark p-r-10"
-                                                   data-toggle="tooltip" title="Edit"><i
-                                                className="ti-marker-alt"/></a> <a
-                                                href="#" className="text-dark"
-                                                title="Delete" data-toggle="tooltip"><i
-                                                className="ti-trash"/></a></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Varun Dhavan</td>
-                                            <td>#95457898</td>
-                                            <td><img src="../assets/images/property/prop2.jpeg" alt="iPhone"
-                                                     width="80"/></td>
-                                            <td>River view home</td>
-                                            <td>On Rent</td>
-                                            <td>09-7-2017</td>
-                                            <td><span
-                                                className="label label-warning font-weight-100">Pending</span>
-                                            </td>
-                                            <td><a href="#" className="text-dark p-r-10"
-                                                   data-toggle="tooltip" title="Edit"><i
-                                                className="ti-marker-alt"/></a> <a
-                                                href="#" className="text-dark"
-                                                title="Delete" data-toggle="tooltip"><i
-                                                className="ti-trash"/></a></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Ritesh Desh</td>
-                                            <td>#68457898</td>
-                                            <td><img src="../assets/images/property/prop3.jpeg"
-                                                     alt="apple_watch" width="80"/></td>
-                                            <td>Gray Chair</td>
-                                            <td>12</td>
-                                            <td>08-7-2017</td>
-                                            <td><span
-                                                className="label label-success font-weight-100">Paid</span>
-                                            </td>
-                                            <td><a href="#" className="text-dark p-r-10"
-                                                   data-toggle="tooltip" title="Edit"><i
-                                                className="ti-marker-alt"/></a> <a
-                                                href="#" className="text-dark"
-                                                title="Delete" data-toggle="tooltip"><i
-                                                className="ti-trash"/></a></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Hrithik</td>
-                                            <td>#45457898</td>
-                                            <td><img src="../assets/images/property/prop3.jpeg"
-                                                     alt="mac_mouse" width="80"/></td>
-                                            <td>Pure Wooden chair</td>
-                                            <td>18</td>
-                                            <td>02-7-2017</td>
-                                            <td><span
-                                                className="label label-danger font-weight-100">Failed</span>
-                                            </td>
-                                            <td><a href="#" className="text-dark p-r-10"
-                                                   data-toggle="tooltip" title="Edit"><i
-                                                className="ti-marker-alt"/></a> <a
-                                                href="#" className="text-dark"
-                                                title="Delete" data-toggle="tooltip"><i
-                                                className="ti-trash"/></a></td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="row">
+                    <TourListDashboard/>
                     <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                         <div className="card bg-light">
                             <div className="row no-gutters align-items-center">
@@ -261,65 +114,6 @@ class DashBoard extends Component {
                                                 </button>
                                             </div>
                                         </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                        <div className="card">
-                            <div className="card-body">
-                                <h5 className="card-title">RECENT PROPERTIES</h5>
-                                <div className="d-flex no-block m-b-20 m-t-30">
-                                    <div className="p-r-15">
-                                        <a href="#"><img
-                                            src="../assets/images/property/prop1.jpeg" alt="property"
-                                            width="100"/></a>
-                                    </div>
-                                    <div>
-                                        <h5 className="card-title m-b-5"><a href="#"
-                                                                            className="link">4 BHK Avenue
-                                            Street, Mountain View</a></h5>
-                                        <span className="text-muted">Oct 07, 2015 | Jon Doe</span>
-                                    </div>
-                                </div>
-                                <div className="d-flex no-block m-b-20">
-                                    <div className="p-r-15">
-                                        <a href="#"><img
-                                            src="../assets/images/property/prop2.jpeg" alt="property"
-                                            width="100"/></a>
-                                    </div>
-                                    <div>
-                                        <h5 className="card-title m-b-5"><a href="#"
-                                                                            className="link">2 BHK Masto
-                                            Street, Mountain View</a></h5>
-                                        <span className="text-muted">Oct 07, 2015 | Jon Doe</span>
-                                    </div>
-                                </div>
-                                <div className="d-flex no-block m-b-20">
-                                    <div className="p-r-15">
-                                        <a href="#"><img
-                                            src="../assets/images/property/prop3.jpeg" alt="property"
-                                            width="100"/></a>
-                                    </div>
-                                    <div>
-                                        <h5 className="card-title m-b-5"><a href="#"
-                                                                            className="link">5 BHK Kalash
-                                            Street, Mountain View</a></h5>
-                                        <span className="text-muted">Oct 07, 2015 | Jon Doe</span>
-                                    </div>
-                                </div>
-                                <div className="d-flex no-block m-b-20">
-                                    <div className="p-r-15">
-                                        <a href="#"><img
-                                            src="../assets/images/property/prop4.jpeg" alt="property"
-                                            width="100"/></a>
-                                    </div>
-                                    <div>
-                                        <h5 className="card-title m-b-5"><a href="#"
-                                                                            className="link">1 BHK Amidhar
-                                            Street, Mountain View</a></h5>
-                                        <span className="text-muted">Oct 07, 2015 | Jon Doe</span>
                                     </div>
                                 </div>
                             </div>
@@ -416,4 +210,5 @@ class DashBoard extends Component {
     }
 }
 
-export default DashBoard;
+
+export default (DashBoard);

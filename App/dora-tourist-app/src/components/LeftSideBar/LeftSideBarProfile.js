@@ -7,10 +7,11 @@ class LeftSideBarProfile extends Component {
     onClick = () => {
         let {logoutUser} = this.props;
         logoutUser();
-    }
+    };
 
     render() {
-        return <li className="user-pro"><a className="has-arrow waves-effect waves-dark"
+        return(
+        <li className="user-pro"><a className="has-arrow waves-effect waves-dark"
                                            href="#"
                                            aria-expanded="false"><img
             src="/assets/images/users/1.jpg" alt="user-img"
@@ -26,7 +27,8 @@ class LeftSideBarProfile extends Component {
                 <li><a style={{cursor:'pointer'}} onClick={this.onClick}><i className="fa fa-power-off"></i> Logout</a>
                 </li>
             </ul>
-        </li>;
+        </li>
+    )
     }
 
 }

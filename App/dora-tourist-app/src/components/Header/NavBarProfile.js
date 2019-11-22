@@ -36,10 +36,10 @@ class NavBarProfile extends Component {
 
         let normal = <div className="dropdown-menu dropdown-menu-right animated flipInY">
             <Link to="/login" className="dropdown-item"><i
-    className="fas fa-sign-in-alt"/> Login</Link>
+                className="fas fa-sign-in-alt"/> Login</Link>
             <div className="dropdown-divider"/>
             <Link to="/register" className="dropdown-item"><i
-    className="fa fas fa-user-plus"/> Register</Link>
+                className="fa fas fa-user-plus"/> Register</Link>
         </div>;
 
         return <li className="nav-item dropdown u-pro">
@@ -48,7 +48,7 @@ class NavBarProfile extends Component {
                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img
                 src="/assets/images/users/1.jpg" alt="user" className=""/> <span
                 className="hidden-md-down">Mark &nbsp;<i
-    className="fa fa-angle-down"/></span> </a>
+                className="fa fa-angle-down"/></span> </a>
             {this.props.user._id ? onLogged : normal}
         </li>;
     }

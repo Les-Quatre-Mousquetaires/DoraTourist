@@ -12,10 +12,11 @@ const GetTour = (id) => {
     return async dispatch => {
         let uri = `api/tours/${id}`;
         const response = await APICaller(uri, 'GET');
+        console.log("TOUR ACTIONS:",response);
         dispatch({type: GET_TOUR, payload: response });
     
     }
-}
+};
 
 
 

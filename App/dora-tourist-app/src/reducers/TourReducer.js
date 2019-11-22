@@ -24,7 +24,7 @@ let tourNull = {
         maxPerson: 0,
     },
     comments: [],
-}
+};
 
 let tours = [tourNull];
 

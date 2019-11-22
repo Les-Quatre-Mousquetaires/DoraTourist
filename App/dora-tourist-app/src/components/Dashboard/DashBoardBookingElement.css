@@ -1,0 +1,6 @@
+.card-body-booking{
+    max-height: 450px;
+    margin-bottom: 10px;
+    overflow:scroll;
+    -webkit-overflow-scrolling: touch;
+}

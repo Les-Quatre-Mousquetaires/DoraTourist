@@ -22,7 +22,7 @@ const mapStateToProps = (state) => {
     return {
         tours: state.tourReducer
     };
-}
+};
 
 const mapDispatchToProps = (dispatch, props) => {
     return {
@@ -30,6 +30,6 @@ const mapDispatchToProps = (dispatch, props) => {
             dispatch(GetTours());
         }
     }
-}
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(TourContainer);

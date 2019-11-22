@@ -5,7 +5,7 @@
 import React, {Component} from 'react';
 import {Preloader} from "../Meta/Preloader";
 import {Header} from "../Header/Header";
-import {LeftSideBar} from "../LeftSideBar/LeftSideBar";
+import LeftSideBar from "../LeftSideBar/LeftSideBar";
 import {HomeSearchBar} from "../HomePage/HomeSearchBar";
 import homeContentRoutes from "../../routes/HomeContentRoutes";
 import {HomeRightSideBar} from "../HomePage/HomeRightSideBar";

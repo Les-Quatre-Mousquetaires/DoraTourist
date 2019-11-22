@@ -26,7 +26,7 @@ export class TourElement extends Component {
                 <img className="card-img-top" src={this.state.image}
                      alt="Card image cap"/>
                 <div className="card-img-overlay">
-                    <span className="badge badge-danger badge-pill">For Rent</span>
+                    <span className="badge badge-danger badge-pill">Đang hot!</span>
                 </div>
                 <div className="card-body bg-light">
                     <h4 className="card-title">{this.state.name}</h4>

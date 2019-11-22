@@ -1,4 +1,4 @@
-import {GET_TOURS, GET_TOUR} from "../utils/Types";
+import {GET_TOURS, GET_TOUR, NEW_TOUR} from "../utils/Types";
 
 
 let tourNull = {
@@ -40,10 +40,12 @@ let tourReducer = (state = toursInitState, action) => {
             return tours;  
         case GET_TOUR:
             let tour = [action.payload.data];
-            return tour;          
+            return tour;
+        case NEW_TOUR:
+            return action.payload.data;
         default:
             return state;
     }
-}
+};
 
 export default tourReducer;

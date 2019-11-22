@@ -1,11 +1,13 @@
 import React, {Component} from 'react';
 import TourListDashboard from "../Dashboard/TourListDashboard";
 import DashboardBookingOverview from "../Dashboard/DashboardBookingOverview";
+import DashboardModalTour from "./DashboardModalTour";
 
 class DashBoard extends Component {
-    constructor(props){
+    constructor(props) {
         super(props);
     }
+
     render() {
         return (
             <div>
@@ -64,6 +66,7 @@ class DashBoard extends Component {
                     </div>
                 </div>
                 <DashboardBookingOverview/>
+
                 <div className="row">
                     <TourListDashboard/>
                     <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12">
@@ -75,14 +78,14 @@ class DashBoard extends Component {
                                             <a href="#"><img alt="img"
                                                              className="thumb-lg img-circle"
                                                              src="../assets/images/users/agent.jpg"/></a>
-                                            <h4 className="card-title m-t-10">Jon Doe</h4>
-                                            <h6 className="text-muted">Agent of Property</h6>
+                                            <h4 className="card-title m-t-10">Steve Jobs</h4>
+                                            <h6 className="text-muted">Agent of Apple</h6>
                                             <div className="p-20">
                                                 <i className="fa fa-phone text-danger p-r-10"
                                                    aria-hidden="true"/> 800-1800-24657
                                                 <br/> <i
                                                 className="fa fa-envelope-o text-danger p-r-10 m-t-10"
-                                                aria-hidden="true"/> jon@realestate.com
+                                                aria-hidden="true"/> billgate@amazon.com
                                             </div>
                                         </div>
                                     </div>
@@ -117,6 +120,18 @@ class DashBoard extends Component {
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="col-md-4">
+                    <div className="card">
+                        <div className="card-body">
+                            <h4 className="card-title">Vào đây để thêm tour</h4>
+                            <button type="button" className="btn mb-2 btn-rounded btn-block btn-outline-info"
+                                    data-toggle="modal"
+                                    data-target="#responsive-modal">Add Tour
+                            </button>
+                            <DashboardModalTour/>
                         </div>
                     </div>
                 </div>

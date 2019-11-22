@@ -14,7 +14,6 @@ class DashboardBookingOverview extends Component {
         let getItem = this.props.bookings;
         let listBookings;
         if(getItem.length!==undefined){
-            console.log(getItem);
             listBookings = getItem.map((item,index)=>{
                 return(
                     <DashBoardBookingElement key={index} id={item._id} user={item.creator} tour={item.tour}/>

@@ -1,4 +1,4 @@
-import { GET_TOURS, GET_TOUR } from "../utils/Types";
+import {GET_TOURS, GET_TOUR, NEW_TOUR} from "../utils/Types";
 import APICaller from "../utils/APICaller";
 
 const GetTours = () => {
@@ -6,18 +6,28 @@ const GetTours = () => {
         const response = await APICaller('api/tours/', 'GET');
         dispatch({type: GET_TOURS, payload: response});
     } 
-}
+};
 
 const GetTour = (id) => {
     return async dispatch => {
         let uri = `api/tours/${id}`;
         const response = await APICaller(uri, 'GET');
-        console.log("TOUR ACTIONS:",response);
+        //console.log("TOUR ACTIONS:",response);
         dispatch({type: GET_TOUR, payload: response });
     
     }
 };
 
+const NewTour = (tour)=>{
+    return async  dispatch => {
+        let url = "api/tours";
+        const response = await APICaller(url,'POST',tour);
+        console.log(response);
+        window.alert(" Tạo thành công");
+        window.location.reload();
+        dispatch({type: NEW_TOUR, payload: response });
+    }
+};
 
 
-export {GetTours, GetTour}
+export {GetTours, GetTour, NewTour}

@@ -18,6 +18,10 @@ class TourDetailElement extends Component {
             return <CommentRow key={index} comment={comment}/>;
         });
         let linkTo = `/booking/${this.props.match.params.id}`;
+        let onLogged = <a href={linkTo}
+                          className="ml-5 btn waves-effect waves-light btn-rounded btn-primary">Book Now</a>;
+        let normal = <Link to="/login" className="ml-5 btn waves-effect waves-light btn-rounded btn-primary">Đăng nhập
+            để Book ngay!</Link>
         return (
             <div>
                 <div className="row">
@@ -62,9 +66,9 @@ class TourDetailElement extends Component {
                                     <h5 className="m-b-0"><span className="text-muted"><i
                                         className="fa fa-map-marker text-danger m-r-10"
                                         aria-hidden="true"/>{this.props.tour[0].location}
-                                        <a href={linkTo}
-                                              className="ml-5 btn waves-effect waves-light btn-rounded btn-primary">Book Now
-                                    </a>
+
+
+                                        {this.props.user._id ? onLogged : normal}
                                     </span>
                                     </h5>
 
@@ -290,6 +294,7 @@ class TourDetailElement extends Component {
 
 const MapStateToProps = (state) => {
     return {
+        user: state.authReducer,
         tour: state.tourReducer,
         comments: state.commentReducer
     }

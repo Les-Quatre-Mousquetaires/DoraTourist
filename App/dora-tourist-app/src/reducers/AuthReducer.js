@@ -4,7 +4,7 @@
  */
 
 
-import {LOGIN_USER, LOGOUT_USER, REGISTER_USER, VIEW_USER} from "../utils/Types";
+import {LOGIN_USER, LOGOUT_USER, REGISTER_USER} from "../utils/Types";
 
 let userLogged = JSON.parse(localStorage.getItem('user'));
 let userNull = {
@@ -12,6 +12,7 @@ let userNull = {
     name: '',
     token: '',
     email: '',
+    location: '',
     role: '',
     tours: [],
     comments: []

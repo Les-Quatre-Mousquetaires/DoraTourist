@@ -18,6 +18,7 @@ const logout = () => {
             comments: [],
             email: "",
             name: "",
+            location: "",
             role: "",
             token: "",
             tours: [],

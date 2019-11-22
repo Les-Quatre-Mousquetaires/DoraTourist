@@ -11,7 +11,7 @@ class BookingPage extends Component {
         let user = {
             name: u.name,
             email: u.email,
-            address: u.address ? u.address : '',
+            location: u.location ? u.location : '',
             phoneNumber: u.phoneNumber,
             tourId: this.props.match.params.id,
             checkinDate: '23/11/2019'
@@ -57,8 +57,8 @@ class BookingPage extends Component {
                                            type="text" name="email" placeholder="Email"/>
                                     <input value={this.state.name} onChange={this.onChange} className="form-control-sm"
                                            type="name" name="name" placeholder="Name"/>
-                                    <input value={this.state.address} onChange={this.onChange}
-                                           className="form-control-sm" type="text" name="address"
+                                    <input value={this.state.location} onChange={this.onChange}
+                                           className="form-control-sm" type="text" name="location"
                                            placeholder="Adresss"/>
                                     <input value={this.state.phoneNumber} onChange={this.onChange}
                                            className="form-control-sm" type="text" name="phoneNumber"

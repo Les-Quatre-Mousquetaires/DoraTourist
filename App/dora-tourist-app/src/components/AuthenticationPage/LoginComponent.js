@@ -20,17 +20,17 @@ class LoginComponent extends Component {
         this.setState({
             [name]: value
         });
-    }
+    };
 
     onSubmit = async (event) => {
         event.preventDefault();
         let {email, password} = this.state;
         let user = {
             email, password
-        }
+        };
         let {loginUser} = this.props.dispatch;
         loginUser(user);
-    }
+    };
 
     render() {
         let {user} = this.props;

@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import LeftSideBarProfile from "./LeftSideBarProfile";
+import {Link} from "react-router-dom";
 
 export class LeftSideBar extends Component {
     render() {
@@ -10,9 +11,9 @@ export class LeftSideBar extends Component {
                         <LeftSideBarProfile/>
 
                         <li className="nav-small-cap">--- ADMIN TOOLS</li>
-                        <li><a className="waves-effect waves-dark" href="index.html"><i
+                        <li><Link to='/dashboard' className="waves-effect waves-dark" ><i
                             className="icon-speedometer"></i><span
-                            className="hide-menu">Dashboard</span></a>
+                            className="hide-menu">Dashboard</span></Link>
                         </li>
                         <li><a className="has-arrow waves-effect waves-dark" href="#"
                                aria-expanded="false"><i

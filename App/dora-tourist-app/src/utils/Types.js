@@ -5,19 +5,26 @@
 const LOGIN_USER = 'login_user';
 const LOGOUT_USER = 'logout_user';
 const REGISTER_USER = 'register_user';
-const VIEW_USER = 'view_user'
+const VIEW_USER = 'view_user';
+const UPDATE_USER = 'update_user';
+const GET_BOOKS_USER = 'get_books_user';
 
-const GET_TOURS = 'GET_TOURS';
-const GET_TOUR = 'GET_TOUR';
-const SET_FILTER_PARAMS = 'SET_FILTER_PARAMS';
+const GET_TOURS = 'get_tours';
+const GET_TOUR = 'get_tour';
 
+const GET_COMMENTS = 'GET_COMMENTS';
 
-const HTTP_404_ERROR = 'HTTP_404_ERROR';
-const HTTP_401_ERROR = 'HTTP_401_ERROR';
-const HTTP_OTHER_ERROR = 'HTTP_OTHER_ERROR';
-
+const CREATE_BOOK = 'create_book';
 
 export {
-    LOGIN_USER, LOGOUT_USER, REGISTER_USER, GET_TOURS, GET_TOUR, VIEW_USER, SET_FILTER_PARAMS,
-    HTTP_404_ERROR, HTTP_401_ERROR, HTTP_OTHER_ERROR
+    LOGIN_USER,
+    LOGOUT_USER,
+    REGISTER_USER,
+    GET_TOURS,
+    GET_TOUR,
+    VIEW_USER,
+    UPDATE_USER,
+    GET_BOOKS_USER,
+    GET_COMMENTS,
+    CREATE_BOOK
 }

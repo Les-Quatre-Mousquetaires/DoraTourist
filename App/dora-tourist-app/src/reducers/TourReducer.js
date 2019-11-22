@@ -6,6 +6,7 @@ let tourNull = {
     name: '',
     location: '',
     description: '',
+    image: '',
     creator: {
         role: '',
         tours: [],

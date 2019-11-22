@@ -6,6 +6,7 @@ let tourNull = {
     name: '',
     location: '',
     description: '',
+    image: '',
     creator: {
         role: '',
         tours: [],
@@ -34,10 +35,10 @@ let toursInitState = tours ? tours : {
 };
 
 let tourReducer = (state = toursInitState, action) => {
-    switch(action.type) {
+    switch (action.type) {
         case GET_TOURS:
             let tours = action.payload.data;
-            return tours;  
+            return tours;
         case GET_TOUR:
             let tour = [action.payload.data];
             return tour;

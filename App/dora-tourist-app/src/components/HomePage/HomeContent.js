@@ -1,8 +1,5 @@
 import React, {Component} from "react";
 import {TourElement} from "../UtilElementComponents/TourElement";
-import {connect} from 'react-redux';
-
-
 
 export class HomeContent extends Component {
     constructor(props) {
@@ -22,8 +19,6 @@ export class HomeContent extends Component {
             <div className="row">
                 {tours}
             </div>
-            
         )
-
     }
 }

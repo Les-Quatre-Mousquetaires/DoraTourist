@@ -1,7 +1,5 @@
 import React, {Component} from "react";
 import {Link} from "react-router-dom";
-import { connect } from "react-redux";
-import { GetTour } from "../../actions/TourAction";
 
 export class TourElement extends Component {
     
@@ -12,6 +10,7 @@ export class TourElement extends Component {
         this.state = {
             id: t._id,
             name: t.name,
+            image: t.image,
             description: t.description,
             comments: t.comments,
             creator: t.creator,
@@ -24,10 +23,10 @@ export class TourElement extends Component {
         let link = `tours/` + this.state.id;
         return (<div className="col-lg-3 col-md-6">
             <div className="card">
-                <img className="card-img-top" src="/assets/images/huan/1.jpg"
+                <img className="card-img-top" src={this.state.image}
                      alt="Card image cap"/>
                 <div className="card-img-overlay">
-                    <span className="badge badge-danger badge-pill">For Rent</span>
+                    <span className="badge badge-danger badge-pill">Đang hot!</span>
                 </div>
                 <div className="card-body bg-light">
                     <h4 className="card-title">{this.state.name}</h4>
@@ -36,21 +35,15 @@ export class TourElement extends Component {
                 <div className="card-body border-top">
                     <div className="d-flex no-block align-items-center">
                         <span><img src="/assets/images/property/pro-bath.png"/></span>
-                        <span className="p-10 text-muted">Bathrooms</span>
+                        <span className="p-10 text-muted">Phòng tắm</span>
                         <span
-                            className="ml-auto badge badge-pill badge-secondary pull-right">2</span>
+                            className="ml-auto badge badge-pill badge-secondary pull-right">1</span>
                     </div>
                     <div className="d-flex no-block align-items-center">
                         <span><img src="/assets/images/property/pro-bed.png"/></span>
-                        <span className="p-10 text-muted">Beds</span>
+                        <span className="p-10 text-muted">Giường</span>
                         <span
                             className="ml-auto badge badge-pill badge-secondary pull-right">2</span>
-                    </div>
-                    <div className="d-flex no-block align-items-center">
-                        <span><img src="/assets/images/property/pro-garage.png"/></span>
-                        <span className="p-10 text-muted">Garages</span>
-                        <span
-                            className="ml-auto badge badge-pill badge-secondary pull-right">1</span>
                     </div>
                     <hr/>
                    

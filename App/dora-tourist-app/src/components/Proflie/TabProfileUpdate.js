@@ -64,7 +64,7 @@ class TabProfileUpdate extends Component {
                 </div>
                 <div className="form-horizontal form-material">
                     <div className="form-group">
-                        <label className="col-md-12">Full Name</label>
+                        <label className="col-md-12">Tên đầy đủ</label>
                         <div className="col-md-12">
                             <input type="text" value={user.name}
                                    name="name" className="form-control form-control-line"
@@ -72,14 +72,14 @@ class TabProfileUpdate extends Component {
                         </div>
                     </div>
                     <div className="form-group">
-                        <label className="col-md-12">Password</label>
+                        <label className="col-md-12">Mật khẩu</label>
                         <div className="col-md-12">
                             <input type="password" name="password" placeholder="Your password" value={user.password}
                                    className="form-control form-control-line" onChange={this.onChange}/>
                         </div>
                     </div>
                     <div className="form-group">
-                        <label className="col-md-12">Phone No</label>
+                        <label className="col-md-12">Số điện thoại</label>
                         <div className="col-md-12">
                             <input type="text" placeholder="Your Phone Number" value={user.phoneNumber}
                                    name="phoneNumber" className="form-control form-control-line"
@@ -87,7 +87,7 @@ class TabProfileUpdate extends Component {
                         </div>
                     </div>
                     <div className="form-group">
-                        <label className="col-sm-12">Select Country</label>
+                        <label className="col-sm-12">Chọn Quốc tịch</label>
                         <div className="col-sm-12">
                             <select className="form-control form-control-line" name="location"
                                     value={user.location}
@@ -105,7 +105,7 @@ class TabProfileUpdate extends Component {
                     </div>
                     <div className="form-group">
                         <div className="col-sm-12">
-                            <button className="btn btn-success" onClick={this.onSubmit}>Update Profile
+                            <button className="btn btn-success" onClick={this.onSubmit}>Cập nhật
                             </button>
                         </div>
                     </div>

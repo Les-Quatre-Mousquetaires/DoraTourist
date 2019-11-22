@@ -22,11 +22,11 @@ class ProfileTagRight extends Component {
                     <div className="tab-pane" id="profile" role="tabpanel">
                         <div className="card-body">
                             <div className="row">
-                                <div className="col-md-3 col-xs-6 b-r"><strong>Full Name</strong>
+                                <div className="col-md-3 col-xs-6 b-r"><strong>Tên đầy đủ</strong>
                                     <br/>
                                     <p className="text-muted">{user.name}</p>
                                 </div>
-                                <div className="col-md-3 col-xs-6 b-r"><strong>Mobile</strong>
+                                <div className="col-md-3 col-xs-6 b-r"><strong>SĐt</strong>
                                     <br/>
                                     <p className="text-muted">{user.phoneNumber}</p>
                                 </div>
@@ -34,7 +34,7 @@ class ProfileTagRight extends Component {
                                     <br/>
                                     <p className="text-muted">{user.email}</p>
                                 </div>
-                                <div className="col-md-3 col-xs-6"><strong>Location</strong>
+                                <div className="col-md-3 col-xs-6"><strong>Quốc Tịch</strong>
                                     <br/>
                                     <p className="text-muted">{user.location}</p>
                                 </div>

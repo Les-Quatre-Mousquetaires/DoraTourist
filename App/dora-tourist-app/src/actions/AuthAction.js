@@ -8,8 +8,10 @@ import APICaller from "../utils/APICaller";
 
 const login = (user) => {
     return async dispatch => {
-        const response = await APICaller('auth/login/', 'POST', user);
-        dispatch({type: LOGIN_USER, payload: response});
+        APICaller('auth/login/', 'POST', user)
+            .then(response => {
+                dispatch({type: LOGIN_USER, payload: response});
+            }).catch(err => window.alert('Sai MK'));
     }
 };
 const logout = () => {

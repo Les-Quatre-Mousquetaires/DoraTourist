@@ -18,7 +18,7 @@ class Profile extends Component {
                     <ProfileFormLeft/>
                     <ProfileTagRight/>
                 </div>
-                <ServicePanel/>
+                {/*<ServicePanel/>*/}
             </div>
         );
     }

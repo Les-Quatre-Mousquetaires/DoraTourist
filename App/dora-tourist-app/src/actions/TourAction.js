@@ -1,4 +1,4 @@
-import {GET_TOURS, GET_TOUR, NEW_TOUR} from "../utils/Types";
+import {GET_TOURS, GET_TOUR, NEW_TOUR, UPDATE_TOUR} from "../utils/Types";
 import APICaller from "../utils/APICaller";
 
 const GetTours = () => {
@@ -28,6 +28,16 @@ const NewTour = (tour)=>{
         dispatch({type: NEW_TOUR, payload: response });
     }
 };
+const UpdateTour = (tour)=>{
+    return async dispatch=>{
+        let url = "api/tours/"+tour._id;
+        const  response = await  APICaller(url,'PATCH',tour);
+        console.log(response);
+        window.alert(" Update thành công");
+        window.location.reload();
+        dispatch({type: UPDATE_TOUR, payload: response });
+    }
+};
 
 
-export {GetTours, GetTour, NewTour}
+export {GetTours, GetTour, NewTour, UpdateTour}

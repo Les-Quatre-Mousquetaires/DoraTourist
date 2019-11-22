@@ -8,8 +8,14 @@ import userReducer from "./UserReducer";
 import tourReducer from "./TourReducer";
 import {bookingReducer} from "./BookingReducer";
 
+// const masterReducer = combineReducers({
+//     authReducer, userReducer, tourReducer, bookingReducer
+// =======
+import bookReducer from "./BookReducer";
+import commentReducer from "./CommentReducer";
+
 const masterReducer = combineReducers({
-    authReducer, userReducer, tourReducer, bookingReducer
+    authReducer, userReducer, tourReducer, bookReducer, commentReducer,bookingReducer
 });
 
 export default masterReducer;

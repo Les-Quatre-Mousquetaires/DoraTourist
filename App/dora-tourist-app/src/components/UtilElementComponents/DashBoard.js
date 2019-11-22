@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import TourListDashboard from "../Dashboard/TourListDashboard";
 import DashboardBookingOverview from "../Dashboard/DashboardBookingOverview";
-import DashboardModalTour from "./DashboardModalTour";
+import DashboardModalTour from "../Dashboard/DashboardModalTour";
 
 class DashBoard extends Component {
     constructor(props) {
@@ -123,10 +123,9 @@ class DashBoard extends Component {
                         </div>
                     </div>
                 </div>
-                <div className="col-md-4">
+                <div className="col-md-2">
                     <div className="card">
                         <div className="card-body">
-                            <h4 className="card-title">Vào đây để thêm tour</h4>
                             <button type="button" className="btn mb-2 btn-rounded btn-block btn-outline-info"
                                     data-toggle="modal"
                                     data-target="#responsive-modal">Add Tour

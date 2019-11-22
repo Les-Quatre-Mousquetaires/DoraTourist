@@ -1,27 +1,90 @@
 import React, {Component} from "react";
+import {getBooks} from "../../actions/BookActions";
+import {connect} from "react-redux";
+import {MDBDataTable} from "mdbreact";
 
-export class TagProfileTour extends Component {
+
+
+class TagProfileTour extends Component {
+    constructor(props) {
+        super(props);
+        let {getBooks} = this.props;
+        getBooks();
+    }
+
+    getData = () => {
+        let data = {
+            columns: [
+                {
+                    label: 'Mã giao dịch',
+                    field: 'a',
+                    sort: 'asc',
+                }, {
+                    label: 'Tour',
+                    field: 'b',
+                    sort: 'asc',
+                }, {
+                    label: 'Giá',
+                    field: 'c',
+                    sort: 'asc',
+                }, {
+                    label: 'Người book',
+                    field: 'd',
+                    sort: 'asc',
+                }, {
+                    label: 'Ngày book',
+                    field: 'e',
+                    sort: 'asc',
+                }
+            ]
+        };
+        let rows = [];
+        let {books} = this.props;
+        for(let i = 0; i < books.length; i++){
+            rows.push({
+                a: books[i]._id,
+                b: books[i].tour.name,
+                c: books[i].tour.price,
+                d: books[i].creator.name,
+                e: books[i].createdAt
+            });
+        }
+        console.log(rows);
+        data.rows = rows;
+        return data;
+    }
+
     render() {
+        let data = this.getData();
+        console.log(data);
         return <div className="tab-pane active" id="home" role="tabpanel">
             <div className="card">
                 <div className="card-body">
-                    <h4 className="card-title">Sortable table</h4>
-                    <h6 className="card-subtitle">Basic sortable table</h6>
-                    <table data-toggle="table"
-                           data-url="https://api.github.com/users/wenzhixin/repos?type=owner&sort=full_name&direction=asc&per_page=100&page=1"
-                           data-sort-name="stargazers_count" data-height="280" data-mobile-responsive="true"
-                           data-sort-order="desc" className="table">
-                        <thead>
-                        <tr>
-                            <th data-field="name" data-sortable="true"> Name</th>
-                            <th data-field="stargazers_count" data-sortable="true" data-width="100"> Stars</th>
-                            <th data-field="forks_count" data-sortable="true" data-width="100"> Forks</th>
-                            <th data-field="description" data-sortable="true"> Description</th>
-                        </tr>
-                        </thead>
-                    </table>
+                    <MDBDataTable
+                        striped
+                        bordered
+                        hover
+                        small
+                        data={data}
+                    />
                 </div>
             </div>
         </div>;
     }
 }
+
+const mapStateToProps = (state) => {
+    return {
+        books: state.bookReducer
+    };
+};
+
+const mapDispatchToProps = (dispatch, props) => {
+    return {
+        getBooks: () => {
+            dispatch(getBooks());
+        }
+    }
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(TagProfileTour);

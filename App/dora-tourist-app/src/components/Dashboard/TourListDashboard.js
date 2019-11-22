@@ -10,11 +10,11 @@ class TourListDashboard extends Component {
         let {loadTours} = this.props;
         loadTours();
     }
-
     render() {
         let listTour = this.props.tours.map((item, index) => {
             return (
-                <DashboardTourElement name={item.name} image={item.image} price={item.price} day={item.updatedAt} key={index}/>
+                <DashboardTourElement name={item.name} image={item.image} price={item.price} id={item._id}
+                                      day={item.updatedAt} key={index} />
             )
         });
         return (

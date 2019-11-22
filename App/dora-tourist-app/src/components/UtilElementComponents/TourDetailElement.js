@@ -1,17 +1,27 @@
 import React, {Component} from 'react';
-import { GetTour } from '../../actions/TourAction';
-import { connect } from 'react-redux';
+import {GetTour} from '../../actions/TourAction';
+import {connect} from 'react-redux';
+import CommentRow from "./CommentRow";
+import {getComments} from "../../actions/CommentAction";
+import {Link} from "react-router-dom";
 
 class TourDetailElement extends Component {
     constructor(props) {
         super(props);
-        let {loadTour} = this.props;
+        let {loadTour, getComments} = this.props;
         loadTour(this.props.match.params.id);
+        getComments(this.props.match.params.id);
     }
 
-
-  
     render() {
+        let renderCommentRow = this.props.comments.map((comment, index) => {
+            return <CommentRow key={index} comment={comment}/>;
+        });
+        let linkTo = `/booking/${this.props.match.params.id}`;
+        let onLogged = <a href={linkTo}
+                          className="ml-5 btn waves-effect waves-light btn-rounded btn-primary">Book Now</a>;
+        let normal = <Link to="/login" className="ml-5 btn waves-effect waves-light btn-rounded btn-primary">Đăng nhập
+            để Book ngay!</Link>
         return (
             <div>
                 <div className="row">
@@ -54,8 +64,14 @@ class TourDetailElement extends Component {
                                 <div className="p-t-20 p-b-20">
                                     <h4 className="card-title">{this.props.tour[0].name}</h4>
                                     <h5 className="m-b-0"><span className="text-muted"><i
-                                        className="fa fa-map-marker text-danger m-r-10" aria-hidden="true"/>{this.props.tour[0].location}</span>
+                                        className="fa fa-map-marker text-danger m-r-10"
+                                        aria-hidden="true"/>{this.props.tour[0].location}
+
+
+                                        {this.props.user._id ? onLogged : normal}
+                                    </span>
                                     </h5>
+
                                 </div>
                                 <hr className="m-0"/>
                                 <p className="text-dark p-t-20 pro-desc"> {this.props.tour[0].description}</p>
@@ -65,40 +81,11 @@ class TourDetailElement extends Component {
                             <div className="col-sm-6">
                                 <div className="card">
                                     <div className="card-body">
-                                        {/* <h5 className="card-title">Amenities</h5>
-                                        <hr className="m-0 p-10"/>
-                                        <div className="d-flex fa fa-check-circle text-success p-b-10">
-                                            <h6 className="m-l-10 text-dark">Private Space</h6>
-                                        </div>
-                                        <div className="d-flex fa fa-check-circle text-success p-b-10">
-                                            <h6 className="m-l-10 text-dark">WiFi</h6>
-                                        </div>
-                                        <div className="d-flex fa fa-check-circle text-success p-b-10">
-                                            <h6 className="m-l-10 text-dark">Basketball Court</h6>
-                                        </div>
-                                        <div className="d-flex fa fa-check-circle text-success p-b-10">
-                                            <h6 className="m-l-10 text-dark">Fireplace</h6>
-                                        </div>
-                                        <div className="d-flex fa fa-check-circle text-success p-b-10">
-                                            <h6 className="m-l-10 text-dark">Doorman</h6>
-                                        </div>
-                                        <div className="d-flex fa fa-check-circle text-success p-b-10">
-                                            <h6 className="m-l-10 text-dark">Swimming Pool</h6>
-                                        </div>
-                                        <div className="d-flex fa fa-check-circle text-success p-b-10">
-                                            <h6 className="m-l-10 text-dark">Gym</h6>
-                                        </div>
-                                        <div className="d-flex fa fa-check-circle text-success p-b-10">
-                                            <h6 className="m-l-10 text-dark">Parking</h6>
-                                        </div>
-                                        <div className="d-flex fa fa-check-circle text-success p-b-10">
-                                            <h6 className="m-l-10 text-dark">Laundry</h6>
-                                        </div> */}
                                         <h5>Advantages</h5>
-                                        {this.props.tour[0].advantages.map((a,i) => 
-                                          <div key={i} className="d-flex fa fa-check-circle text-success p-b-10">
-                                              <h6 className="m-l-10 text-dark">{a}</h6>
-                                          </div>  
+                                        {this.props.tour[0].advantages.map((a, i) =>
+                                            <div key={i} className="d-flex fa fa-check-circle text-success p-b-10">
+                                                <h6 className="m-l-10 text-dark">{a}</h6>
+                                            </div>
                                         )}
                                     </div>
                                 </div>
@@ -118,7 +105,7 @@ class TourDetailElement extends Component {
                                                     <td>Max Person</td>
                                                     <td>{this.props.tour[0].info.maxPerson}</td>
                                                 </tr>
-                                                
+
                                                 </tbody>
                                             </table>
                                         </div>
@@ -131,7 +118,7 @@ class TourDetailElement extends Component {
                                         <h5 className="card-title fw-500 p-l-20">Location</h5>
                                         <iframe
                                             src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d117506.98606137399!2d72.5797426!3d23.020345749999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1476988114677"
-                                            width="100%" height="244" frameBorder="0" style={{border:0}}
+                                            width="100%" height="244" frameBorder="0" style={{border: 0}}
                                             allowFullScreen/>
                                     </div>
                                 </div>
@@ -161,7 +148,7 @@ class TourDetailElement extends Component {
                                             <td>Type</td>
                                             <td>Single Family</td>
                                         </tr>
-                                        
+
                                         <tr>
                                             <td>Status</td>
                                             <td>Active</td>
@@ -184,10 +171,38 @@ class TourDetailElement extends Component {
                                 <div className="text-center"><i className="fa fa-phone text-danger p-r-10"
                                                                 aria-hidden="true"/> {this.props.tour[0].creator.phoneNumber}
                                     <br/> <i className="fa fa-envelope-o text-danger p-r-10 m-t-10"
-                                       aria-hidden="true"/> {this.props.tour[0].creator.email}</div>
-                            </div>                         
+                                             aria-hidden="true"/> {this.props.tour[0].creator.email}</div>
+                            </div>
                         </div>
-                        
+                        <div className="card">
+
+
+                            <div className="card">
+                                <div className="card-body">
+                                    <h4 className="card-title">Recent Comments</h4>
+                                </div>
+                                <div className="comment-widgets m-b-20 overflow-auto"
+                                     style={{minHeight: '10rem', maxHeight: '35rem'}}>
+                                    {renderCommentRow}
+                                </div>
+                                <div className="card-body border-top">
+                                    <div className="row">
+                                        <div className="col-8">
+                                            <textarea placeholder="Type your message here"
+                                                      className="form-control border-0"></textarea>
+                                        </div>
+                                        <div className="col-4 text-right">
+                                            <button type="button" className="btn btn-info btn-circle btn-lg">
+                                                <i className="fas fa-paper-plane"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
                     </div>
                 </div>
                 <div className="right-sidebar">
@@ -279,7 +294,9 @@ class TourDetailElement extends Component {
 
 const MapStateToProps = (state) => {
     return {
-        tour: state.tourReducer
+        user: state.authReducer,
+        tour: state.tourReducer,
+        comments: state.commentReducer
     }
 }
 
@@ -287,7 +304,10 @@ const MapDispatchToProps = (dispatch, props) => {
     return {
         loadTour: (id) => {
             dispatch(GetTour(id));
-        } 
+        },
+        getComments: (id) => {
+            dispatch(getComments(id));
+        }
     }
 }
 

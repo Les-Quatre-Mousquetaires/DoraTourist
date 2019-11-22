@@ -16,30 +16,27 @@ class NavBarProfile extends Component {
 
         let onLogged = <div className="dropdown-menu dropdown-menu-right animated flipInY">
             <Link to={link} className="dropdown-item">
-                <i className="ti-user"/> My Profile
+                <i className="ti-user"/> Thông tin cá nhân
             </Link>
             <a href="#" className="dropdown-item">
-                <i className="ti-wallet"/> My Balance
-            </a>
-            <a href="#" className="dropdown-item">
-                <i className="ti-email"/> Inbox
+                <i className="ti-wallet"/> Ví của tôi
             </a>
             <div className="dropdown-divider"/>
             <a href="#" className="dropdown-item">
-                <i className="ti-settings"/> Account Setting
+                <i className="ti-settings"/> Thiết lập cá nhân
             </a>
             <div className="dropdown-divider"/>
             <Link to="/" style={{cursor: 'pointer'}} className="dropdown-item" onClick={this.onClick}>
-                <i className="fa fa-power-off"/> Logout
+                <i className="fa fa-power-off"/> Đăng xuất
             </Link>
         </div>;
 
         let normal = <div className="dropdown-menu dropdown-menu-right animated flipInY">
             <Link to="/login" className="dropdown-item"><i
-    className="fas fa-sign-in-alt"/> Login</Link>
+    className="fas fa-sign-in-alt"/> Đăng nhập</Link>
             <div className="dropdown-divider"/>
             <Link to="/register" className="dropdown-item"><i
-    className="fa fas fa-user-plus"/> Register</Link>
+    className="fa fas fa-user-plus"/> Đăng kí</Link>
         </div>;
 
         return <li className="nav-item dropdown u-pro">
@@ -47,7 +44,7 @@ class NavBarProfile extends Component {
                href=""
                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img
                 src="/assets/images/users/1.jpg" alt="user" className=""/> <span
-                className="hidden-md-down">Mark &nbsp;<i
+                className="hidden-md-down">{this.props.user.name} &nbsp;<i
     className="fa fa-angle-down"/></span> </a>
             {this.props.user._id ? onLogged : normal}
         </li>;

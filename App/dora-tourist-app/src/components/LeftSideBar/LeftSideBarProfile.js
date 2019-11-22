@@ -14,21 +14,23 @@ class LeftSideBarProfile extends Component {
                                            href="#"
                                            aria-expanded="false"><img
             src="/assets/images/users/1.jpg" alt="user-img"
-            className="img-circle"/><span className="hide-menu">Mark Jeckson</span></a>
+            className="img-circle"/><span className="hide-menu">{this.props.user.name}</span></a>
             <ul aria-expanded="false" className="collapse">
-                <li><a href="#"><i className="ti-user"></i> My Profile</a>
+                <li><a href="#"><i className="ti-user"></i> Trang cá nhân</a>
                 </li>
-                <li><a href="#"><i className="ti-wallet"></i> My
-                    Balance</a></li>
-                <li><a href="#"><i className="ti-email"></i> Inbox</a></li>
-                <li><a href="#"><i className="ti-settings"></i> Account
-                    Setting</a></li>
-                <li><a style={{cursor:'pointer'}} onClick={this.onClick}><i className="fa fa-power-off"></i> Logout</a>
+                <li><a href="#"><i className="ti-wallet"></i> Ví của tôi</a></li>
+                <li><a href="#"><i className="ti-settings"></i>Cài đặt</a></li>
+                <li><a style={{cursor: 'pointer'}} onClick={this.onClick}><i className="fa fa-power-off"></i> Logout</a>
                 </li>
             </ul>
         </li>;
     }
 
+}
+const mapStateToProps = (state) => {
+    return {
+        user: state.authReducer
+    }
 }
 
 
@@ -40,4 +42,4 @@ const mapDispatchToProps = (dispatch, props) => {
     }
 }
 
-export default connect(null, mapDispatchToProps)(LeftSideBarProfile);
+export default connect(mapStateToProps, mapDispatchToProps)(LeftSideBarProfile);

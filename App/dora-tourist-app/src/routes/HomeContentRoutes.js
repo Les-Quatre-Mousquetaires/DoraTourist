@@ -18,14 +18,6 @@ const homeContentRoutes = [
         exact: true,
         main: () => <TourContainer/>
     },{
-        path: '/test',
-        exact: true,
-        main: () => <TestRoute/>
-    },{
-        path: '/test2',
-        exact: true,
-        main: () => <TestRoute2/>
-    },{
         path: '/tours/:id',
         exact: false,
         main: ({match}) => <TourDetailElement match={match}/>

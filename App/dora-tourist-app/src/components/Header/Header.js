@@ -25,12 +25,13 @@ export class Header extends Component {
                                 <NavBarFromSearch/>
                             </li>
                         </ul>
-                        <ul className="navbar-nav my-lg-0">
+                        <ul className="navbar-nav my-lg-0 mr-5">
                             <NavBarNotification/>
-                            <NavBarMessage/>
-                            <NavBarModal/>
+                            {/*<NavBarMessage/>*/}
+                            {/*<NavBarModal/>*/}
                             <NavBarProfile/>
-                            <NavBarSettings/>
+                            {/*<NavBarSettings/>*/}
+                            <li className="nav-item" style={{width: '15px'}}></li>
                         </ul>
                     </div>
                 </nav>

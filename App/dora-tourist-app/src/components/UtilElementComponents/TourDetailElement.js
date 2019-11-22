@@ -81,7 +81,7 @@ class TourDetailElement extends Component {
                             <div className="col-sm-6">
                                 <div className="card">
                                     <div className="card-body">
-                                        <h5>Advantages</h5>
+                                        <h5>Điểm thu hút</h5>
                                         {this.props.tour[0].advantages.map((a, i) =>
                                             <div key={i} className="d-flex fa fa-check-circle text-success p-b-10">
                                                 <h6 className="m-l-10 text-dark">{a}</h6>
@@ -93,16 +93,16 @@ class TourDetailElement extends Component {
                             <div className="col-sm-6">
                                 <div className="card">
                                     <div className="card-body">
-                                        <h5 className="card-title">Information</h5>
+                                        <h5 className="card-title">Tour</h5>
                                         <div className="table-responsive p-t-10 border-top">
                                             <table className="table no-border">
                                                 <tbody className="text-dark">
                                                 <tr>
-                                                    <td>Days</td>
+                                                    <td>Số ngày</td>
                                                     <td>{this.props.tour[0].info.days}</td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Max Person</td>
+                                                    <td>Số lượng thành viên tối đa</td>
                                                     <td>{this.props.tour[0].info.maxPerson}</td>
                                                 </tr>
 
@@ -115,11 +115,12 @@ class TourDetailElement extends Component {
                             <div className="col-sm-12">
                                 <div className="card p-l-0 p-r-0 p-b-10">
                                     <div className="card-body">
-                                        <h5 className="card-title fw-500 p-l-20">Location</h5>
-                                        <iframe
-                                            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d117506.98606137399!2d72.5797426!3d23.020345749999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1476988114677"
-                                            width="100%" height="244" frameBorder="0" style={{border: 0}}
-                                            allowFullScreen/>
+                                        <h5 className="card-title fw-500 p-l-20">Vị trí</h5>
+                                        <iframe style={{border: 0}}
+                                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3834.0094194787!2d108.1829608!3d16.065395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3142184b2ccdf84d%3A0x1f9195b3482dc06e!2zNjUgSMOgbSBOZ2hpLCBUaOG6oWMgR2nDoW4sIFEuIFRoYW5oIEtow6osIMSQw6AgTuG6tW5nIDU1MDAwMA!5e0!3m2!1svi!2s!4v1537175288942"
+                                                width="100%" height="244" frameBorder="0"
+                                                allowFullScreen="allowfullscreen">
+                                        </iframe>
                                     </div>
                                 </div>
                             </div>
@@ -128,27 +129,22 @@ class TourDetailElement extends Component {
                     <div className="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                         <div className="card">
                             <div className="card-body">
-                                <h5 className="card-title">Essential Information</h5>
+                                <h5 className="card-title">Thông tin thêm</h5>
                                 <div className="table-responsive">
                                     <table className="table no-border">
                                         <tbody className="text-dark">
                                         <tr>
-                                            <td>Price</td>
+                                            <td>Giá</td>
                                             <td>&#36; {this.props.tour[0].price}</td>
                                         </tr>
                                         <tr>
-                                            <td>Bedrooms</td>
-                                            <td>5</td>
+                                            <td>Giường</td>
+                                            <td>2</td>
                                         </tr>
                                         <tr>
-                                            <td>Bathrooms</td>
-                                            <td>5</td>
+                                            <td>Dành cho</td>
+                                            <td>Gia đình nhỏ</td>
                                         </tr>
-                                        <tr>
-                                            <td>Type</td>
-                                            <td>Single Family</td>
-                                        </tr>
-
                                         <tr>
                                             <td>Status</td>
                                             <td>Active</td>
@@ -179,7 +175,7 @@ class TourDetailElement extends Component {
 
                             <div className="card">
                                 <div className="card-body">
-                                    <h4 className="card-title">Recent Comments</h4>
+                                    <h4 className="card-title">Các bình luận</h4>
                                 </div>
                                 <div className="comment-widgets m-b-20 overflow-auto"
                                      style={{minHeight: '10rem', maxHeight: '35rem'}}>
@@ -188,7 +184,7 @@ class TourDetailElement extends Component {
                                 <div className="card-body border-top">
                                     <div className="row">
                                         <div className="col-8">
-                                            <textarea placeholder="Type your message here"
+                                            <textarea placeholder="Để lại comment nào..."
                                                       className="form-control border-0"></textarea>
                                         </div>
                                         <div className="col-4 text-right">

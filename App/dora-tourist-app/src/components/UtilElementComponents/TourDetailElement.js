@@ -62,9 +62,9 @@ class TourDetailElement extends Component {
                                     <h5 className="m-b-0"><span className="text-muted"><i
                                         className="fa fa-map-marker text-danger m-r-10"
                                         aria-hidden="true"/>{this.props.tour[0].location}
-                                        <Link to={linkTo}
+                                        <a href={linkTo}
                                               className="ml-5 btn waves-effect waves-light btn-rounded btn-primary">Book Now
-                                    </Link>
+                                    </a>
                                     </span>
                                     </h5>
 

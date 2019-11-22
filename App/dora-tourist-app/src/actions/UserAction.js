@@ -9,7 +9,6 @@ const view = (userID) => {
     let url = 'api/users/' + userID;
     return async dispatch => {
         const response = await APICaller(url, 'GET', "Hello");
-        console.log(response);
         dispatch({type: VIEW_USER, payload: response});
     }
 };

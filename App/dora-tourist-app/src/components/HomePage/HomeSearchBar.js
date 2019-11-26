@@ -44,12 +44,9 @@ export class HomeSearchBar extends Component {
                             <div className="col-sm-6 col-md-3">
                                 <div className="form-group has-info">
                                     <select defaultValue="" className="form-control custom-select">
-                                        <option value="" disabled>Property Type</option>
-                                        <option value="1">Apartment</option>
-                                        <option value="2">Villa/Mansion</option>
-                                        <option value="3">Cottage</option>
-                                        <option value="4">Flat</option>
-                                        <option value="5">House</option>
+                                        <option value="" disabled>Tour Type</option>
+                                        <option value="1">Single</option>
+                                        <option value="2">With Family</option>
                                     </select>
                                 </div>
                             </div>

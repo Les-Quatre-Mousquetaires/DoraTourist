@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import {connect} from "react-redux";
 import {GetTours, NewTour} from "../../actions/TourAction";
 
-let idUser = JSON.parse(localStorage.getItem('user'))._id;
+let idUser = JSON.parse(localStorage.getItem('user')) ? JSON.parse(localStorage.getItem('user'))._id : '';
 
 class DashboardModalTour extends Component {
     constructor(props) {

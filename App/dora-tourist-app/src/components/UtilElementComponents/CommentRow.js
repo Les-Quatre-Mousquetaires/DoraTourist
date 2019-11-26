@@ -1,11 +1,8 @@
 import React, {Component} from "react";
-import {connect} from "react-redux";
-import {getComments} from "../../actions/CommentAction";
 
 class CommentRow extends Component {
     render() {
         let {comment} = this.props;
-        console.log(this.props);
         return <div className="d-flex flex-row comment-row">
             <div className="p-2">
                 <span className="round">

@@ -8,7 +8,6 @@ import config from "./configs";
 import headerHeper from "./HeaderHelper";
 
 let APICaller = (endpoint, method = 'GET', body) => {
-    //onsole.log(headerHeper());
     return axios({
         method: method,
         url: `${config.API_URL}/${endpoint}`,
